@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.398333mm"
+   height="17.398333mm"
+   viewBox="0 0 17.398333 17.398333"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Water_good.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-579.9784"
+     inkscape:cy="81.450168"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1418"
+     inkscape:window-x="-8"
+     inkscape:window-y="124"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-126.61631,-152.98536)">
+    <g
+       style="opacity:1"
+       id="g31396"
+       transform="translate(-362.02778,2.4861642)">
+      <g
+         transform="translate(125.63736,49.422563)"
+         id="g31324">
+        <g
+           style="fill:#aaccff;fill-opacity:1;stroke:#000000;stroke-width:1.75748038;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="g6"
+           transform="matrix(0.26458333,0,0,0.26458333,363.23923,101.30913)">
+          <circle
+             style="fill:#aaccff;fill-opacity:1;stroke:#000000;stroke-width:1.75748038;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="circle4"
+             r="32"
+             cy="32"
+             cx="32"
+             class="st0" />
+        </g>
+        <g
+           style="fill:#00112b;fill-opacity:1"
+           id="g10"
+           class="st1"
+           transform="matrix(0.26458333,0,0,0.26458333,363.23923,101.30913)">
+          <path
+             style="fill:#00112b;fill-opacity:1"
+             id="path8"
+             d="M 48,37.1 C 48,46.4 40.8,54 32,54 23.2,54 16,46.4 16,37.1 16,27.8 25.6,20.2 32,10 38.4,20.2 48,27.7 48,37.1 Z"
+             class="st2"
+             inkscape:connector-curvature="0" />
+        </g>
+        <g
+           style="fill:#2a7fff;fill-opacity:1"
+           id="g14"
+           transform="matrix(0.26458333,0,0,0.26458333,363.23923,101.30913)">
+          <path
+             style="fill:#2a7fff;fill-opacity:1"
+             id="path12"
+             d="M 48,35.1 C 48,44.4 40.8,52 32,52 23.2,52 16,44.4 16,35.1 16,25.8 25.6,18.2 32,8 38.4,18.2 48,25.7 48,35.1 Z"
+             class="st3"
+             inkscape:connector-curvature="0" />
+        </g>
+      </g>
+      <path
+         inkscape:export-ydpi="72.839996"
+         inkscape:export-xdpi="72.839996"
+         inkscape:export-filename="C:\Documents and Settings\Staff\Desktop\photos\SVG\path2161.png"
+         sodipodi:nodetypes="ccccccc"
+         id="path5075"
+         d="m 503.33476,156.22051 c -1.46234,-1.08829 -2.15422,-2.0401 -2.15422,-2.0401 -2.70053,1.72719 -5.56848,7.85995 -5.56848,7.85995 -1.34405,-2.05372 -2.69545,-2.62654 -2.69545,-2.62654 -0.60753,0.88117 -1.65475,2.05552 -1.65475,2.05552 2.44251,0.71403 4.49267,3.33419 4.49267,3.33419 4.43194,-7.55248 7.58023,-8.58302 7.58023,-8.58302 z"
+         style="fill:#5fd35f;fill-opacity:1;fill-rule:evenodd;stroke:#001a00;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>
