@@ -1,0 +1,2532 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.01" TargetName="EndStation" TargetType="Program" ContainsContext="true" Owner="BNL, Microsoft" ExportDate="Fri Oct 19 01:36:38 2018" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="XF02ID_SIX_EPS">
+<DataTypes Use="Context">
+</DataTypes>
+<Modules Use="Context">
+<Module Use="Reference" Name="Drop_PatchPanel">
+</Module>
+<Module Use="Reference" Name="Drop_DAA_DC">
+</Module>
+<Module Use="Reference" Name="Drop_ArmSafety">
+</Module>
+<Module Use="Reference" Name="Drop_SC_STS">
+</Module>
+<Module Use="Reference" Name="Drop_M4">
+</Module>
+<Module Use="Reference" Name="Drop_Rack">
+</Module>
+<Module Use="Reference" Name="Drop_3AA">
+</Module>
+</Modules>
+<Tags Use="Context">
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP3" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC12_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwFreeN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop03_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop07_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="Misc_Sts_2" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>F1 FF 3F C7</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="-952107023"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC3_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC10_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconHorn2_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_SwEPS_Bypass_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Sts_old" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_GP_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="Misc_Sts_1" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>80 F8 FF 1A</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="452982912"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_SwFreeP_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_SwEPS_BypassLight" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC11_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_GP_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconHorn1_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC10_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg1_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_RedLight_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop04_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP5" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwFreeP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_Trans_SwFreeP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AAR2T1_SVS6_1_Air_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconOrg2_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="GreenSolid" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconOrg1_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop08_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_SwFreeN_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop09_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop10_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_BTZ_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="MC10_STO_Temp" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC7_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg2_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir7_AxS6_MP_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_Trans_SwFreeN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_SC1_PBrng_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconOrg3_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA4_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_PBrngCmd_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC12_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DC1_OutFreeN_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_TZ_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop06_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS1_GP_SwColNC" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_SwSftyEdge1_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop02_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="edge" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Misc_Sts_4" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>20 00 00 00</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="32"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC6_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC7_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_BTZ_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir6_AxS6_MP_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="TONR_GreenBlinking" TagType="Base" DataType="FBD_TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>03 00 00 00 0B 00 00 00 D0 07 00 00 ED 07 00 00 
+00 00 00 00 13 00 00 00 E3 94 25 00 00 16 00 00 
+E4 A5 9B 3C 00 00 00 00 ED 07 00 00 0B 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="2000"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="2029"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconHorn3_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA2_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg6_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir5_AxS1_2T_SwAirP3" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="GreenBlinking" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_OVY_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC6_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop05_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC11_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_IVY_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg5_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconGrn2_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir5_AxS1_2T_SwAirP2" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_CmdLegRaise_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_SC1_PBrngCmd_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="TEMP1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP4" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_OutLeg_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir6_AxS6_MP_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_2T_SwFreeN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconRed2_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DC1_OutFreeP_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconGrn3_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconGrn1_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_MT_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Safety_SwEStop01_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconRed1_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_BeaconRed3_Out_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA2_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_PermitMotion_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_OVY_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_StsILockOK_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_2T_SwFreeP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg3_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir5_AxS1_2T_SwAirP1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA3_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_MT_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS1_GP_SwColNO" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC1_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_AxS8_TZ_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_DAA1_SVS7_1_DO1" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_M5R2T1_SVS1_1_Air_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_BT1_SwLeg4_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwAirP6" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC3_CmdAbort_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_Trans_SwFreeN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Grt1_AxS6_Trans_SwFreeP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="Misc_Sts_3" TagType="Base" DataType="DINT" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>DF FF 4F 2C</Data>
+<Data Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="743440351"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_MC1_CmdSTO_Cmd" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_CT_PLCSafety1_EnblSafety_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_PBrng_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="TONR_01" TagType="Base" DataType="FBD_TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>01 00 00 00 01 00 00 00 88 13 00 00 00 00 00 00 
+00 00 00 00 11 00 00 00 B4 EB 21 00 00 16 00 00 
+96 43 8B 3C 00 00 00 00 00 00 00 00 01 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="5000"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_IVY_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_AxS6_2T_SwOvrP" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_SwSftyEdge2_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_3AA1_SwCol" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Arm1_CmdBcn_Sts" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>00</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</Data>
+</Tag>
+<Tag Name="TOFR_STO_MC11" TagType="Base" DataType="FBD_TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>03 00 00 00 0B 00 00 00 C8 00 00 00 00 00 00 00 
+00 00 00 00 12 00 00 00 A4 AB 00 00 00 16 00 00 
+BD 74 93 3C 00 00 00 00 00 00 00 00 0B 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="200"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="TOFR_STO_MC10" TagType="Base" DataType="FBD_TIMER" Constant="false" ExternalAccess="Read/Write">
+<Data>03 00 00 00 0B 00 00 00 C8 00 00 00 00 00 00 00 
+00 00 00 00 14 00 00 00 FB 9C 00 00 00 16 00 00 
+0B D7 A3 3C 00 00 00 00 00 00 00 00 0B 00 00 00</Data>
+<Data Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="1"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="200"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="1"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="1"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</Data>
+</Tag>
+<Tag Name="MC11_STO_Temp" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+<Tag Name="IDD_ES_Mir7_AxS6_MP_SwOvrN" TagType="Base" DataType="BOOL" Radix="Decimal" Constant="false" ExternalAccess="Read/Write">
+<Data>01</Data>
+<Data Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="1"/>
+</Data>
+</Tag>
+</Tags>
+<Programs Use="Context">
+<Program Use="Target" Name="EndStation" TestEdits="false" MainRoutineName="Main_EndStation" Disabled="false">
+<Tags/>
+<Routines>
+<Routine Name="Endstation_IOMap" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[]]>
+</Line>
+<Line Number="1">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP1:=Drop_3AA:10:I.0;     //3AAR2T air pressure switch 1]]>
+</Line>
+<Line Number="2">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP2:=Drop_3AA:10:I.1;     //3AAR2T air pressure switch 2]]>
+</Line>
+<Line Number="3">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP3:=Drop_3AA:10:I.2;     //3AAR2T air pressure switch 3]]>
+</Line>
+<Line Number="4">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP4:=Drop_3AA:10:I.3;     //3AAR2T air pressure switch 4]]>
+</Line>
+<Line Number="5">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP5:=Drop_3AA:10:I.4;     //3AAR2T air pressure switch 5]]>
+</Line>
+<Line Number="6">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP6:=Drop_3AA:10:I.5;     //3AAR2T air pressure switch 6]]>
+</Line>
+<Line Number="7">
+<![CDATA[Drop_3AA:13:O.6:=IDD_ES_3AAR2T1_SVS6_1_Air_Cmd;     //3AAR2T air bearing solenoid valve]]>
+</Line>
+<Line Number="8">
+<![CDATA[Drop_3AA:13:O.1:=IDD_ES_Arm1_BeaconGrn2_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="9">
+<![CDATA[Drop_3AA:13:O.3:=IDD_ES_Arm1_BeaconOrg2_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="10">
+<![CDATA[Drop_3AA:13:O.5:=IDD_ES_Arm1_BeaconRed2_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="11">
+<![CDATA[Drop_3AA:13:O.7:=IDD_ES_Arm1_BeaconHorn2_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="12">
+<![CDATA[IDD_ES_Safety_SwEStop01_Sts:=Drop_ArmSafety:1:I.0;     //Emergency stop 1]]>
+</Line>
+<Line Number="13">
+<![CDATA[IDD_ES_Safety_SwEStop02_Sts:=Drop_ArmSafety:1:I.1;     //Emergency stop 2]]>
+</Line>
+<Line Number="14">
+<![CDATA[IDD_ES_Safety_SwEStop03_Sts:=Drop_ArmSafety:1:I.2;     //Emergency stop 3]]>
+</Line>
+<Line Number="15">
+<![CDATA[IDD_ES_Safety_SwEStop04_Sts:=Drop_ArmSafety:1:I.3;     //Emergency stop 4]]>
+</Line>
+<Line Number="16">
+<![CDATA[IDD_ES_Safety_SwEStop05_Sts:=Drop_ArmSafety:1:I.4;     //Emergency stop 5]]>
+</Line>
+<Line Number="17">
+<![CDATA[IDD_ES_Safety_SwEStop06_Sts:=Drop_ArmSafety:1:I.5;     //Emergency stop 6]]>
+</Line>
+<Line Number="18">
+<![CDATA[IDD_ES_Safety_SwEStop07_Sts:=Drop_ArmSafety:1:I.6;     //Emergency stop 7]]>
+</Line>
+<Line Number="19">
+<![CDATA[IDD_ES_Safety_SwEStop08_Sts:=Drop_ArmSafety:1:I.7;     //Emergency stop 8]]>
+</Line>
+<Line Number="20">
+<![CDATA[IDD_ES_Safety_SwEStop09_Sts:=Drop_ArmSafety:2:I.0;     //Emergency stop 9]]>
+</Line>
+<Line Number="21">
+<![CDATA[IDD_ES_Safety_SwEStop10_Sts:=Drop_ArmSafety:2:I.1;     //Emergency stop 10]]>
+</Line>
+<Line Number="22">
+<![CDATA[IDD_ES_Arm1_SwSftyEdge1_Sts:=Drop_ArmSafety:2:I.2;     //Safety edge 1]]>
+</Line>
+<Line Number="23">
+<![CDATA[IDD_ES_Arm1_SwSftyEdge2_Sts:=Drop_ArmSafety:2:I.3;     //Safety edge 2]]>
+</Line>
+<Line Number="24">
+<![CDATA[IDD_CT_PLCSafety1_StsILockOK_Sts:=Drop_ArmSafety:2:I.4;     //Safety relay interlocks OK (Estop sum)]]>
+</Line>
+<Line Number="25">
+<![CDATA[IDD_CT_PLCSafety1_RedLight_Sts:=Drop_ArmSafety:2:I.5;     //Interlock Tripped (Red Light)]]>
+</Line>
+<Line Number="26">
+<![CDATA[IDD_CT_PLCSafety1_PermitMotion_Sts:=Drop_ArmSafety:2:I.6;     //Safety relay motion permitted (Green light)]]>
+</Line>
+<Line Number="27">
+<![CDATA[IDD_CT_PLCSafety1_SwEPS_Bypass_Sts:=Drop_ArmSafety:2:I.7;     //Safety relay EPS input bypass]]>
+</Line>
+<Line Number="28">
+<![CDATA[Drop_ArmSafety:3:O.0:=IDD_CT_PLCSafety1_EnblSafety_Sts;     //Safety CR-30 EPS Enable]]>
+</Line>
+<Line Number="29">
+<![CDATA[Drop_DAA_DC:7:O.0:=IDD_ES_Arm1_BeaconGrn3_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="30">
+<![CDATA[Drop_DAA_DC:7:O.1:=IDD_ES_Arm1_BeaconOrg3_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="31">
+<![CDATA[Drop_DAA_DC:7:O.5:=IDD_ES_Arm1_BeaconRed3_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="32">
+<![CDATA[Drop_DAA_DC:7:O.6:=IDD_ES_Arm1_BeaconHorn3_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="33">
+<![CDATA[Drop_M4:10:O.2:=IDD_ES_Arm1_BeaconGrn1_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="34">
+<![CDATA[Drop_M4:10:O.3:=IDD_ES_Arm1_BeaconOrg1_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="35">
+<![CDATA[Drop_M4:10:O.4:=IDD_ES_Arm1_BeaconRed1_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="36">
+<![CDATA[Drop_M4:10:O.5:=IDD_ES_Arm1_BeaconHorn1_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="37">
+<![CDATA[IDD_ES_Mir6_AxS6_MP_SwOvrN:=Drop_PatchPanel:1:I.0;     //M6 Pitch Reverse Kill Switch MC10]]>
+</Line>
+<Line Number="38">
+<![CDATA[IDD_ES_Mir6_AxS6_MP_SwOvrP:=Drop_PatchPanel:1:I.1;     //M6 Pitch Forward Kill Switch MC10]]>
+</Line>
+<Line Number="39">
+<![CDATA[IDD_ES_Mir7_AxS6_MP_SwOvrN:=Drop_PatchPanel:1:I.2;     //M7 Pitch Reverse Kill Switch MC10]]>
+</Line>
+<Line Number="40">
+<![CDATA[IDD_ES_Mir7_AxS6_MP_SwOvrP:=Drop_PatchPanel:1:I.3;     //M7 Pitch Forward Kill Switch MC10]]>
+</Line>
+<Line Number="41">
+<![CDATA[IDD_ES_Grt1_AxS6_MT_SwOvrN:=Drop_PatchPanel:1:I.4;     //Grating Translation Reverse Kill Switch MC10]]>
+</Line>
+<Line Number="42">
+<![CDATA[IDD_ES_Grt1_AxS6_MT_SwOvrP:=Drop_PatchPanel:1:I.5;     //Grating Translation Forward Kill Switch MC10]]>
+</Line>
+<Line Number="43">
+<![CDATA[IDD_ES_Grt1_AxS6_GP_SwOvrN:=Drop_PatchPanel:1:I.6;     //Grating Pitch Reverse Kill Switch MC10]]>
+</Line>
+<Line Number="44">
+<![CDATA[IDD_ES_Grt1_AxS6_GP_SwOvrP:=Drop_PatchPanel:1:I.7;     //Grating Pitch Forward Kill Switch MC10]]>
+</Line>
+<Line Number="45">
+<![CDATA[IDD_ES_3AA1_AxS6_BTZ_SwOvrN:=Drop_PatchPanel:2:I.0;     //3AA Base Trans Z Reverse Kill Switch MC11]]>
+</Line>
+<Line Number="46">
+<![CDATA[IDD_ES_3AA1_AxS6_BTZ_SwOvrP:=Drop_PatchPanel:2:I.1;     //3AA Base Trans Z Forward Kill Switch MC11]]>
+</Line>
+<Line Number="47">
+<![CDATA[IDD_ES_3AA1_AxS6_OVY_SwOvrN:=Drop_PatchPanel:2:I.2;     //3AA Wedge Leveler Outboard Y Z Reverse Kill Switch MC11]]>
+</Line>
+<Line Number="48">
+<![CDATA[IDD_ES_3AA1_AxS6_OVY_SwOvrP:=Drop_PatchPanel:2:I.3;     //3AA Wedge Leveler Outboard Y Forward Kill Switch MC11]]>
+</Line>
+<Line Number="49">
+<![CDATA[IDD_ES_3AA1_AxS6_IVY_SwOvrN:=Drop_PatchPanel:2:I.4;     //3AA Wedge Leveler Inboard Y Z Reverse Kill Switch MC11]]>
+</Line>
+<Line Number="50">
+<![CDATA[IDD_ES_3AA1_AxS6_IVY_SwOvrP:=Drop_PatchPanel:2:I.5;     //3AA Wedge Leveler Inboard Y Forward Kill Switch MC11]]>
+</Line>
+<Line Number="51">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwOvrN:=Drop_PatchPanel:2:I.6;     //3AA 2 Theta Reverse Kill Switch Safety1]]>
+</Line>
+<Line Number="52">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwOvrP:=Drop_PatchPanel:2:I.7;     //3AA 2 Theta Forward Kill Switch Safety1]]>
+</Line>
+<Line Number="53">
+<![CDATA[IDD_ES_DAA1_AxS8_TZ_SwOvrN:=Drop_PatchPanel:3:I.0;     //DAA Translation Z Reverse Kill Switch MC11]]>
+</Line>
+<Line Number="54">
+<![CDATA[IDD_ES_DAA1_AxS8_TZ_SwOvrP:=Drop_PatchPanel:3:I.1;     //DAA Translation Z Forward Kill Switch MC11]]>
+</Line>
+<Line Number="55">
+<![CDATA[IDD_ES_Grt1_AxS6_Trans_SwFreeN:=Drop_PatchPanel:3:I.3;     //Grating Translation Reverse Free Switch]]>
+</Line>
+<Line Number="56">
+<![CDATA[IDD_ES_Grt1_AxS6_Trans_SwFreeP:=Drop_PatchPanel:3:I.2;     //Grating Translation Forward Free Switch]]>
+</Line>
+<Line Number="57">
+<![CDATA[IDD_ES_DAA1_AxS8_Trans_SwFreeN:=Drop_PatchPanel:3:I.4;     //Detector Translation Reverse Free Switch]]>
+</Line>
+<Line Number="58">
+<![CDATA[IDD_ES_DAA1_AxS8_Trans_SwFreeP:=Drop_PatchPanel:3:I.5;     //Detector Translation Forward Free Switch]]>
+</Line>
+<Line Number="59">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwFreeN:=Drop_PatchPanel:3:I.6;     //3AAR2T Reverse Free Switch]]>
+</Line>
+<Line Number="60">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwFreeP:=Drop_PatchPanel:3:I.7;     //3AAR2T Forward Free Switch]]>
+</Line>
+<Line Number="61">
+<![CDATA[IDD_ES_Grt1_AxS1_GP_SwColNC:=Drop_PatchPanel:4:I.0;     //Grating Pitch Collision Switch]]>
+</Line>
+<Line Number="62">
+<![CDATA[IDD_ES_Grt1_AxS1_GP_SwColNO:=Drop_PatchPanel:4:I.1;     //Grating Pitch Collision Switch]]>
+</Line>
+<Line Number="63">
+<![CDATA[IDD_ES_3AA1_SwCol:=Drop_PatchPanel:4:I.2;     //3AA Collision Switch 1]]>
+</Line>
+<Line Number="64">
+<![CDATA[IDD_ES_3AA2_SwCol:=Drop_PatchPanel:4:I.3;     //3AA Collision Switch 2]]>
+</Line>
+<Line Number="65">
+<![CDATA[IDD_ES_3AA3_SwCol:=Drop_PatchPanel:4:I.4;     //3AA Collision Switch 3]]>
+</Line>
+<Line Number="66">
+<![CDATA[IDD_ES_3AA4_SwCol:=Drop_PatchPanel:4:I.5;     //3AA Collision Switch 4]]>
+</Line>
+<Line Number="67">
+<![CDATA[IDD_ES_DAA1_AxS8_2T_SwFreeN:=Drop_PatchPanel:4:I.7;     //DAAR2T Reverse Free Switch]]>
+</Line>
+<Line Number="68">
+<![CDATA[IDD_ES_DAA1_AxS8_2T_SwFreeP:=Drop_PatchPanel:4:I.6;     //DAAR2T Forward Free Switch]]>
+</Line>
+<Line Number="69">
+<![CDATA[IDD_ES_DAA1_SwCol:=Drop_PatchPanel:5:I.0;     //DAA Collision Switch 1]]>
+</Line>
+<Line Number="70">
+<![CDATA[IDD_ES_DAA2_SwCol:=Drop_PatchPanel:5:I.1;     //DAA Collision Switch 2]]>
+</Line>
+<Line Number="71">
+<![CDATA[Drop_Rack:1:O.0:=IDD_CT_MC1_CmdSTO_Cmd;     //MC 01 STO]]>
+</Line>
+<Line Number="72">
+<![CDATA[Drop_Rack:1:O.1:=IDD_CT_MC3_CmdSTO_Cmd;     //MC 03 STO]]>
+</Line>
+<Line Number="73">
+<![CDATA[Drop_Rack:1:O.2:=IDD_CT_MC6_CmdSTO_Cmd;     //MC 06 STO]]>
+</Line>
+<Line Number="74">
+<![CDATA[Drop_Rack:1:O.3:=IDD_CT_MC7_CmdSTO_Cmd;     //MC 07 STO]]>
+</Line>
+<Line Number="75">
+<![CDATA[Drop_Rack:2:O.0:=IDD_CT_MC10_CmdSTO_Cmd;     //MC 10 STO]]>
+</Line>
+<Line Number="76">
+<![CDATA[Drop_Rack:2:O.1:=IDD_CT_MC11_CmdSTO_Cmd;     //MC  11 STO]]>
+</Line>
+<Line Number="77">
+<![CDATA[Drop_Rack:2:O.2:=IDD_CT_MC12_CmdSTO_Cmd;     //MC 12 STO]]>
+</Line>
+<Line Number="78">
+<![CDATA[Drop_Rack:3:O.0:=IDD_CT_MC1_CmdAbort_Cmd;     //MC 01 Abort]]>
+</Line>
+<Line Number="79">
+<![CDATA[Drop_Rack:3:O.1:=IDD_CT_MC3_CmdAbort_Cmd;     //MC 03 Abort]]>
+</Line>
+<Line Number="80">
+<![CDATA[Drop_Rack:3:O.2:=IDD_CT_MC6_CmdAbort_Cmd;     //MC 06 Abort]]>
+</Line>
+<Line Number="81">
+<![CDATA[Drop_Rack:3:O.3:=IDD_CT_MC7_CmdAbort_Cmd;     //MC 07 Abort]]>
+</Line>
+<Line Number="82">
+<![CDATA[Drop_Rack:4:O.0:=IDD_CT_MC10_CmdAbort_Cmd;     //MC 10 Abort]]>
+</Line>
+<Line Number="83">
+<![CDATA[Drop_Rack:4:O.1:=IDD_CT_MC11_CmdAbort_Cmd;     //MC 11 Abort]]>
+</Line>
+<Line Number="84">
+<![CDATA[Drop_Rack:4:O.2:=IDD_CT_MC12_CmdAbort_Cmd;     //MC 12 Abort]]>
+</Line>
+<Line Number="85">
+<![CDATA[IDD_ES_SC1_PBrngCmd_Sts:=Drop_Rack:5:I.0;     //Sample chamber air bearing request from PMAC]]>
+</Line>
+<Line Number="86">
+<![CDATA[IDD_ES_3AA1_PBrngCmd_Sts:=Drop_Rack:5:I.1;     //Optics chamber air bearing request from PMAC]]>
+</Line>
+<Line Number="87">
+<![CDATA[IDD_ES_BT1_CmdLegRaise_Sts:=Drop_Rack:5:I.2;     //Bridge leg raise request (from PMAC)]]>
+</Line>
+<Line Number="88">
+<![CDATA[IDD_ES_Arm1_CmdBcn_Sts:=Drop_Rack:5:I.3;     //Beacon request (from PMAC)]]>
+</Line>
+<Line Number="89">
+<![CDATA[Drop_Rack:6:O.0:=IDD_ES_SC1_PBrng_Sts;     //Sample chamber air bearing status (to PMAC)]]>
+</Line>
+<Line Number="90">
+<![CDATA[Drop_Rack:6:O.1:=IDD_ES_BT1_OutLeg_Sts;     //Bridge leg status (to PMAC)]]>
+</Line>
+<Line Number="91">
+<![CDATA[Drop_Rack:6:O.3:=IDD_ES_DC1_OutFreeN_Sts;     //Detector chamber free switch negative (to PMAC)]]>
+</Line>
+<Line Number="92">
+<![CDATA[Drop_Rack:6:O.2:=IDD_ES_DC1_OutFreeP_Sts;     //Detector chamber free switch positive (to PMAC)]]>
+</Line>
+<Line Number="93">
+<![CDATA[Drop_Rack:6:O.4:=IDD_ES_3AA1_PBrng_Sts;     //Optics chamber air bearing status (to PMAC)]]>
+</Line>
+<Line Number="94">
+<![CDATA[Drop_Rack:6:O.5:=IDD_ES_3AA1_SwFreeN_Sts;     //Optics chamber free switch negative (to PMAC)]]>
+</Line>
+<Line Number="95">
+<![CDATA[Drop_Rack:6:O.6:=IDD_ES_3AA1_SwFreeP_Sts;     //Optics chamber free switch positive (to PMAC)]]>
+</Line>
+<Line Number="96">
+<![CDATA[Drop_Rack:6:O.7:=IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts;     //Grating free switch negative (to PMAC)]]>
+</Line>
+<Line Number="97">
+<![CDATA[Drop_Rack:7:O.0:=IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts;     //Grating free switch positive (to PMAC)]]>
+</Line>
+<Line Number="98">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP1:=Drop_SC_STS:5:I.0;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="99">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP2:=Drop_SC_STS:5:I.1;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="100">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP3:=Drop_SC_STS:5:I.2;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="101">
+<![CDATA[Drop_SC_STS:8:O.7:=IDD_ES_M5R2T1_SVS1_1_Air_Cmd;     //M5R2T air bearing solenoid valve]]>
+</Line>
+<Line Number="102">
+<![CDATA[Drop_DAA_DC:7:O.7:=IDD_ES_DAA1_SVS7_1_DO1;     //DAA foot solenoid valve]]>
+</Line>
+<Line Number="103">
+<![CDATA[IDD_ES_BT1_SwLeg1_Sts:=Drop_DAA_DC:8:I.0;     //DAA Pneumatic Foot Positive Switch 1]]>
+</Line>
+<Line Number="104">
+<![CDATA[IDD_ES_BT1_SwLeg2_Sts:=Drop_DAA_DC:8:I.1;     //DAA Pneumatic Foot Positive Switch 2]]>
+</Line>
+<Line Number="105">
+<![CDATA[IDD_ES_BT1_SwLeg3_Sts:=Drop_DAA_DC:8:I.2;     //DAA Pneumatic Foot Positive Switch 3]]>
+</Line>
+<Line Number="106">
+<![CDATA[IDD_ES_BT1_SwLeg4_Sts:=Drop_DAA_DC:8:I.3;     //DAA Pneumatic Foot Positive Switch 4]]>
+</Line>
+<Line Number="107">
+<![CDATA[IDD_ES_BT1_SwLeg5_Sts:=Drop_DAA_DC:8:I.4;     //DAA Pneumatic Foot Positive Switch 5]]>
+</Line>
+<Line Number="108">
+<![CDATA[IDD_ES_BT1_SwLeg6_Sts:=Drop_DAA_DC:8:I.5;     //DAA Pneumatic Foot Positive Switch 6]]>
+</Line>
+<Line Number="109">
+<![CDATA[Drop_ArmSafety:3:O.1:=IDD_CT_PLCSafety1_SwEPS_BypassLight;     //Bypass light]]>
+</Line>
+<Line Number="110">
+<![CDATA[]]>
+</Line>
+<Line Number="111">
+<![CDATA[]]>
+</Line>
+<Line Number="112">
+<![CDATA[(*IDD_ES_3AA1_AxS6_2T_SwAirP1:=Drop_3AA:10:I.0;     //3AAR2T air pressure switch 1]]>
+</Line>
+<Line Number="113">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP2:=Drop_3AA:10:I.1;     //3AAR2T air pressure switch 2]]>
+</Line>
+<Line Number="114">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP3:=Drop_3AA:10:I.2;     //3AAR2T air pressure switch 3]]>
+</Line>
+<Line Number="115">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP4:=Drop_3AA:10:I.3;     //3AAR2T air pressure switch 4]]>
+</Line>
+<Line Number="116">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP5:=Drop_3AA:10:I.4;     //3AAR2T air pressure switch 5]]>
+</Line>
+<Line Number="117">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP6:=Drop_3AA:10:I.5;     //3AAR2T air pressure switch 6]]>
+</Line>
+<Line Number="118">
+<![CDATA[Drop_3AA:13:O.6 := IDD_ES_3AAR2T1_SVS6_1_Air_Cmd;     //3AAR2T air bearing solenoid valve]]>
+</Line>
+<Line Number="119">
+<![CDATA[Drop_3AA:13:O.1:=IDD_ES_Arm1_BeaconGrn2_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="120">
+<![CDATA[Drop_3AA:13:O.3:=IDD_ES_Arm1_BeaconOrg2_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="121">
+<![CDATA[Drop_3AA:13:O.5:=IDD_ES_Arm1_BeaconRed2_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="122">
+<![CDATA[Drop_3AA:13:O.7:=IDD_ES_Arm1_BeaconHorn2_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="123">
+<![CDATA[IDD_ES_Safety_SwEStop01_Sts:=Drop_ArmSafety:1:I.0;     //Emergency stop 1]]>
+</Line>
+<Line Number="124">
+<![CDATA[IDD_ES_Safety_SwEStop02_Sts:=Drop_ArmSafety:1:I.1;     //Emergency stop 2]]>
+</Line>
+<Line Number="125">
+<![CDATA[IDD_ES_Safety_SwEStop03_Sts:=Drop_ArmSafety:1:I.2;     //Emergency stop 3]]>
+</Line>
+<Line Number="126">
+<![CDATA[IDD_ES_Safety_SwEStop04_Sts:=Drop_ArmSafety:1:I.3;     //Emergency stop 4]]>
+</Line>
+<Line Number="127">
+<![CDATA[IDD_ES_Safety_SwEStop05_Sts:=Drop_ArmSafety:1:I.4;     //Emergency stop 5]]>
+</Line>
+<Line Number="128">
+<![CDATA[IDD_ES_Safety_SwEStop06_Sts:=Drop_ArmSafety:1:I.5;     //Emergency stop 6]]>
+</Line>
+<Line Number="129">
+<![CDATA[IDD_ES_Safety_SwEStop07_Sts:=Drop_ArmSafety:1:I.6;     //Emergency stop 7]]>
+</Line>
+<Line Number="130">
+<![CDATA[IDD_ES_Safety_SwEStop08_Sts:=Drop_ArmSafety:1:I.7;     //Emergency stop 8]]>
+</Line>
+<Line Number="131">
+<![CDATA[IDD_ES_Safety_SwEStop09_Sts:=Drop_ArmSafety:2:I.0;     //Emergency stop 9]]>
+</Line>
+<Line Number="132">
+<![CDATA[IDD_ES_Safety_SwEStop10_Sts:=Drop_ArmSafety:2:I.1;     //Emergency stop 10]]>
+</Line>
+<Line Number="133">
+<![CDATA[IDD_ES_Arm1_SwSftyEdge1_Sts:=Drop_ArmSafety:2:I.2;     //Safety edge 1]]>
+</Line>
+<Line Number="134">
+<![CDATA[IDD_ES_Arm1_SwSftyEdge2_Sts:=Drop_ArmSafety:2:I.3;     //Safety edge 2]]>
+</Line>
+<Line Number="135">
+<![CDATA[IDD_CT_PLCSafety1_StsILockOK_Sts:=Drop_ArmSafety:2:I.4;     //Safety relay interlocks OK (Estop sum)]]>
+</Line>
+<Line Number="136">
+<![CDATA[IDD_CT_PLCSafety1_RedLight_Sts:= Drop_ArmSafety:2:I.5;     //Interlock Tripped (Red Light)]]>
+</Line>
+<Line Number="137">
+<![CDATA[IDD_CT_PLCSafety1_PermitMotion_Sts:=Drop_ArmSafety:2:I.6;     //Safety relay motion permitted (Green light)]]>
+</Line>
+<Line Number="138">
+<![CDATA[IDD_CT_PLCSafety1_SwEPS_Bypass_Sts:=Drop_ArmSafety:2:I.7;     //Safety relay EPS input bypass]]>
+</Line>
+<Line Number="139">
+<![CDATA[//Drop_ArmSafety:3:O.0:=IDD_CT_PLCEPS_StsILockOK_Sts;     //Safety CR-30 EPS Enable]]>
+</Line>
+<Line Number="140">
+<![CDATA[Drop_ArmSafety:3:O.0:=IDD_CT_PLCSafety1_EnblSafety_Sts;     //Safety CR-30 EPS Enable]]>
+</Line>
+<Line Number="141">
+<![CDATA[Drop_DAA_DC:7:O.0:=IDD_ES_Arm1_BeaconGrn3_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="142">
+<![CDATA[Drop_DAA_DC:7:O.1:=IDD_ES_Arm1_BeaconOrg3_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="143">
+<![CDATA[Drop_DAA_DC:7:O.5:=IDD_ES_Arm1_BeaconRed3_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="144">
+<![CDATA[Drop_DAA_DC:7:O.6:=IDD_ES_Arm1_BeaconHorn3_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="145">
+<![CDATA[Drop_M4:10:O.2:=IDD_ES_Arm1_BeaconGrn1_Out_Cmd;     //Green beacon]]>
+</Line>
+<Line Number="146">
+<![CDATA[Drop_M4:10:O.3:=IDD_ES_Arm1_BeaconOrg1_Out_Cmd;     //Orange beacon]]>
+</Line>
+<Line Number="147">
+<![CDATA[Drop_M4:10:O.4:=IDD_ES_Arm1_BeaconRed1_Out_Cmd;     //Red beacon]]>
+</Line>
+<Line Number="148">
+<![CDATA[Drop_M4:10:O.5:=IDD_ES_Arm1_BeaconHorn1_Out_Cmd;     //Horn]]>
+</Line>
+<Line Number="149">
+<![CDATA[IDD_ES_Mir6_AxS6_MP_SwOvrN:=Drop_PatchPanel:1:I.0;     //M6 Pitch Reverse Kill Switch ]]>
+</Line>
+<Line Number="150">
+<![CDATA[IDD_ES_Mir6_AxS6_MP_SwOvrP:=Drop_PatchPanel:1:I.1;     //M6 Pitch Forward Kill Switch ]]>
+</Line>
+<Line Number="151">
+<![CDATA[IDD_ES_Mir7_AxS6_MP_SwOvrN:=Drop_PatchPanel:1:I.2;     //M7 Pitch Reverse Kill Switch ]]>
+</Line>
+<Line Number="152">
+<![CDATA[IDD_ES_Mir7_AxS6_MP_SwOvrP:=Drop_PatchPanel:1:I.3;     //M7 Pitch Forward Kill Switch ]]>
+</Line>
+<Line Number="153">
+<![CDATA[IDD_ES_Grt1_AxS6_MT_SwOvrN:=Drop_PatchPanel:1:I.4;     //Grating Translation Reverse Kill Switch ]]>
+</Line>
+<Line Number="154">
+<![CDATA[IDD_ES_Grt1_AxS6_MT_SwOvrP:=Drop_PatchPanel:1:I.5;     //Grating Translation Forward Kill Switch ]]>
+</Line>
+<Line Number="155">
+<![CDATA[IDD_ES_Grt1_AxS6_GP_SwOvrN:=Drop_PatchPanel:1:I.6;     //Grating Pitch Reverse Kill Switch ]]>
+</Line>
+<Line Number="156">
+<![CDATA[IDD_ES_Grt1_AxS6_GP_SwOvrP:=Drop_PatchPanel:1:I.7;     //Grating Pitch Forward Kill Switch ]]>
+</Line>
+<Line Number="157">
+<![CDATA[IDD_ES_3AA1_AxS6_BTZ_SwOvrN:=Drop_PatchPanel:2:I.0;     //3AA Base Trans Z Reverse Kill Switch ]]>
+</Line>
+<Line Number="158">
+<![CDATA[IDD_ES_3AA1_AxS6_BTZ_SwOvrP:=Drop_PatchPanel:2:I.1;     //Interlock Tripped – Red Light]]>
+</Line>
+<Line Number="159">
+<![CDATA[IDD_ES_3AA1_AxS6_OVY_SwOvrN:=Drop_PatchPanel:2:I.2;     //3AA Wedge Leveler Outboard Y Z Reverse Kill Switch ]]>
+</Line>
+<Line Number="160">
+<![CDATA[IDD_ES_3AA1_AxS6_OVY_SwOvrP:=Drop_PatchPanel:2:I.3;     //3AA Wedge Leveler Outboard Y Forward Kill Switch ]]>
+</Line>
+<Line Number="161">
+<![CDATA[IDD_ES_3AA1_AxS6_IVY_SwOvrN:=Drop_PatchPanel:2:I.4;     //3AA Wedge Leveler Inboard Y Z Reverse Kill Switch ]]>
+</Line>
+<Line Number="162">
+<![CDATA[IDD_ES_3AA1_AxS6_IVY_SwOvrP:=Drop_PatchPanel:2:I.5;     //3AA Wedge Leveler Inboard Y Forward Kill Switch ]]>
+</Line>
+<Line Number="163">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwOvrN:=Drop_PatchPanel:2:I.6;     //3AA 2 Theta Reverse Kill Switch ]]>
+</Line>
+<Line Number="164">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwOvrP:=Drop_PatchPanel:2:I.7;     //3AA 2 Theta Forward Kill Switch ]]>
+</Line>
+<Line Number="165">
+<![CDATA[IDD_ES_DAA1_AxS8_TZ_SwOvrN:=Drop_PatchPanel:3:I.0;     //DAA Translation Z Reverse Kill Switch ]]>
+</Line>
+<Line Number="166">
+<![CDATA[IDD_ES_DAA1_AxS8_TZ_SwOvrP:=Drop_PatchPanel:3:I.1;     //DAA Translation Z Forward Kill Switch ]]>
+</Line>
+<Line Number="167">
+<![CDATA[IDD_ES_Grt1_AxS6_Trans_SwFreeN:=Drop_PatchPanel:3:I.2;     //Grating Translation Reverse Free Switch]]>
+</Line>
+<Line Number="168">
+<![CDATA[IDD_ES_Grt1_AxS6_Trans_SwFreeP:=Drop_PatchPanel:3:I.3;     //Grating Translation Forward Free Switch]]>
+</Line>
+<Line Number="169">
+<![CDATA[IDD_ES_DAA1_AxS8_Trans_SwFreeN:=Drop_PatchPanel:3:I.4;     //Detector Translation Reverse Free Switch]]>
+</Line>
+<Line Number="170">
+<![CDATA[IDD_ES_DAA1_AxS8_Trans_SwFreeP:=Drop_PatchPanel:3:I.5;     //Detector Translation Forward Free Switch]]>
+</Line>
+<Line Number="171">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwFreeN:=Drop_PatchPanel:3:I.6;     //3AAR2T Reverse Free Switch]]>
+</Line>
+<Line Number="172">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwFreeP:=Drop_PatchPanel:3:I.7;     //3AAR2T Forward Free Switch]]>
+</Line>
+<Line Number="173">
+<![CDATA[IDD_ES_Grt1_AxS1_GP_SwColNC:=Drop_PatchPanel:4:I.0;     //Grating Pitch Collision Switch]]>
+</Line>
+<Line Number="174">
+<![CDATA[IDD_ES_Grt1_AxS1_GP_SwColNO:=Drop_PatchPanel:4:I.1;     //Grating Pitch Collision Switch]]>
+</Line>
+<Line Number="175">
+<![CDATA[IDD_ES_3AA1_SwCol:=Drop_PatchPanel:4:I.2;     //3AA Collision Switch 1]]>
+</Line>
+<Line Number="176">
+<![CDATA[IDD_ES_3AA2_SwCol:=Drop_PatchPanel:4:I.3;     //3AA Collision Switch 2]]>
+</Line>
+<Line Number="177">
+<![CDATA[IDD_ES_3AA3_SwCol:=Drop_PatchPanel:4:I.4;     //3AA Collision Switch 3]]>
+</Line>
+<Line Number="178">
+<![CDATA[IDD_ES_3AA4_SwCol:=Drop_PatchPanel:4:I.5;     //3AA Collision Switch 4]]>
+</Line>
+<Line Number="179">
+<![CDATA[IDD_ES_DAA1_AxS8_2T_SwFreeN:=Drop_PatchPanel:4:I.6;     //DAAR2T Reverse Free Switch]]>
+</Line>
+<Line Number="180">
+<![CDATA[IDD_ES_DAA1_AxS8_2T_SwFreeP:=Drop_PatchPanel:4:I.7;     //DAAR2T Forward Free Switch]]>
+</Line>
+<Line Number="181">
+<![CDATA[IDD_ES_DAA1_SwCol:=Drop_PatchPanel:5:I.0;     //DAA Collision Switch 1]]>
+</Line>
+<Line Number="182">
+<![CDATA[IDD_ES_DAA2_SwCol:=Drop_PatchPanel:5:I.1;     //DAA Collision Switch 2]]>
+</Line>
+<Line Number="183">
+<![CDATA[Drop_Rack:1:O.0:=IDD_CT_MC1_CmdSTO_Cmd;     //MC 01 STO]]>
+</Line>
+<Line Number="184">
+<![CDATA[Drop_Rack:1:O.1:=IDD_CT_MC3_CmdSTO_Cmd;     //MC 03 STO]]>
+</Line>
+<Line Number="185">
+<![CDATA[Drop_Rack:1:O.2:=IDD_CT_MC6_CmdSTO_Cmd;     //MC 06 STO]]>
+</Line>
+<Line Number="186">
+<![CDATA[Drop_Rack:1:O.3:=IDD_CT_MC7_CmdSTO_Cmd;     //MC 07 STO]]>
+</Line>
+<Line Number="187">
+<![CDATA[Drop_Rack:2:O.0:=IDD_CT_MC10_CmdSTO_Cmd;     //MC 10 STO]]>
+</Line>
+<Line Number="188">
+<![CDATA[Drop_Rack:2:O.1:=IDD_CT_MC11_CmdSTO_Cmd;     //MC  11 STO]]>
+</Line>
+<Line Number="189">
+<![CDATA[Drop_Rack:2:O.2:=IDD_CT_MC12_CmdSTO_Cmd;     //MC 12 STO]]>
+</Line>
+<Line Number="190">
+<![CDATA[Drop_Rack:3:O.0:=IDD_CT_MC1_CmdAbort_Cmd;     //MC 01 Abort]]>
+</Line>
+<Line Number="191">
+<![CDATA[Drop_Rack:3:O.1:=IDD_CT_MC3_CmdAbort_Cmd;     //MC 03 Abort]]>
+</Line>
+<Line Number="192">
+<![CDATA[Drop_Rack:3:O.2:=IDD_CT_MC6_CmdAbort_Cmd;     //MC 06 Abort]]>
+</Line>
+<Line Number="193">
+<![CDATA[Drop_Rack:3:O.3:=IDD_CT_MC7_CmdAbort_Cmd;     //MC 07 Abort]]>
+</Line>
+<Line Number="194">
+<![CDATA[Drop_Rack:4:O.0:=IDD_CT_MC10_CmdAbort_Cmd;     //MC 10 Abort]]>
+</Line>
+<Line Number="195">
+<![CDATA[Drop_Rack:4:O.1:=IDD_CT_MC11_CmdAbort_Cmd;     //MC 11 Abort]]>
+</Line>
+<Line Number="196">
+<![CDATA[Drop_Rack:4:O.2:=IDD_CT_MC12_CmdAbort_Cmd;     //MC 12 Abort]]>
+</Line>
+<Line Number="197">
+<![CDATA[IDD_ES_SC1_PBrngCmd_Sts:=Drop_Rack:5:I.0;     //Sample chamber air bearing request from PMAC]]>
+</Line>
+<Line Number="198">
+<![CDATA[IDD_ES_3AA1_PBrngCmd_Sts:=Drop_Rack:5:I.1;     //Optics chamber air bearing request from PMAC]]>
+</Line>
+<Line Number="199">
+<![CDATA[IDD_ES_BT1_CmdLegRaise_Sts:=Drop_Rack:5:I.2;     //Bridge leg raise request (from PMAC)]]>
+</Line>
+<Line Number="200">
+<![CDATA[IDD_ES_Arm1_CmdBcn_Sts:=Drop_Rack:5:I.3;     //Beacon request (from PMAC)]]>
+</Line>
+<Line Number="201">
+<![CDATA[Drop_Rack:6:O.0:=IDD_ES_SC1_PBrng_Sts;     //Sample chamber air bearing status (to PMAC)]]>
+</Line>
+<Line Number="202">
+<![CDATA[Drop_Rack:6:O.1:=IDD_ES_BT1_OutLeg_Sts;     //Bridge leg status (to PMAC)]]>
+</Line>
+<Line Number="203">
+<![CDATA[Drop_Rack:6:O.2:=IDD_ES_DC1_OutFreeN_Sts;     //Detector chamber free switch negative (to PMAC)]]>
+</Line>
+<Line Number="204">
+<![CDATA[Drop_Rack:6:O.3:=IDD_ES_DC1_OutFreeP_Sts;     //Detector chamber free switch positive (to PMAC)]]>
+</Line>
+<Line Number="205">
+<![CDATA[Drop_Rack:6:O.4:=IDD_ES_3AA1_PBrng_Sts;     //Optics chamber air bearing status (to PMAC)]]>
+</Line>
+<Line Number="206">
+<![CDATA[Drop_Rack:6:O.5:=IDD_ES_3AA1_SwFreeN_Sts;     //Optics chamber free switch negative (to PMAC)]]>
+</Line>
+<Line Number="207">
+<![CDATA[Drop_Rack:6:O.6:=IDD_ES_3AA1_SwFreeP_Sts;     //Optics chamber free switch positive (to PMAC)]]>
+</Line>
+<Line Number="208">
+<![CDATA[Drop_Rack:6:O.7:=IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts;     //Grating free switch negative (to PMAC)]]>
+</Line>
+<Line Number="209">
+<![CDATA[Drop_Rack:7:O.0:=IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts;     //Grating free switch positive (to PMAC)]]>
+</Line>
+<Line Number="210">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP1:=Drop_SC_STS:5:I.0;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="211">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP2:=Drop_SC_STS:5:I.1;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="212">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP3:=Drop_SC_STS:5:I.2;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="213">
+<![CDATA[Drop_SC_STS:9:O.7 := IDD_ES_M5R2T1_SVS1_1_Air_Cmd;     //M5R2T air bearing solenoid valve]]>
+</Line>
+<Line Number="214">
+<![CDATA[Drop_DAA_DC:7:O.7 := IDD_ES_DAA1_SVS7_1_DO1;     //DAA foot solenoid valve]]>
+</Line>
+<Line Number="215">
+<![CDATA[IDD_ES_DAA1_FootS7_1_SwP:=Drop_DAA_DC:8:I.0;     //DAA Pneumatic Foot Positive Switch 1]]>
+</Line>
+<Line Number="216">
+<![CDATA[IDD_ES_DAA1_FootS7_2_SwP:=Drop_DAA_DC:8:I.1;     //DAA Pneumatic Foot Positive Switch 2]]>
+</Line>
+<Line Number="217">
+<![CDATA[IDD_ES_DAA1_FootS7_3_SwP:=Drop_DAA_DC:8:I.2;     //DAA Pneumatic Foot Positive Switch 3]]>
+</Line>
+<Line Number="218">
+<![CDATA[IDD_ES_DAA1_FootS7_4_SwP:=Drop_DAA_DC:8:I.3;     //DAA Pneumatic Foot Positive Switch 4]]>
+</Line>
+<Line Number="219">
+<![CDATA[IDD_ES_DAA1_FootS7_5_SwP:=Drop_DAA_DC:8:I.4;     //DAA Pneumatic Foot Positive Switch 5]]>
+</Line>
+<Line Number="220">
+<![CDATA[IDD_ES_DAA1_FootS7_6_SwP:=Drop_DAA_DC:8:I.5;     //DAA Pneumatic Foot Positive Switch 6]]>
+</Line>
+<Line Number="221">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP1:=Drop_3AA:10:I.0;     //3AAR2T air pressure switch 1]]>
+</Line>
+<Line Number="222">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP2:=Drop_3AA:10:I.1;     //3AAR2T air pressure switch 2]]>
+</Line>
+<Line Number="223">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP3:=Drop_3AA:10:I.2;     //3AAR2T air pressure switch 3]]>
+</Line>
+<Line Number="224">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP4:=Drop_3AA:10:I.3;     //3AAR2T air pressure switch 4]]>
+</Line>
+<Line Number="225">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP5:=Drop_3AA:10:I.4;     //3AAR2T air pressure switch 5]]>
+</Line>
+<Line Number="226">
+<![CDATA[IDD_ES_3AA1_AxS6_2T_SwAirP6:=Drop_3AA:10:I.5;     //3AAR2T air pressure switch 6]]>
+</Line>
+<Line Number="227">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP1:=Drop_SC_STS:5:I.0;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="228">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP2:=Drop_SC_STS:5:I.1;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="229">
+<![CDATA[IDD_ES_Mir5_AxS1_2T_SwAirP3:=Drop_SC_STS:5:I.2;     //M5R2T air pressure switch 1]]>
+</Line>
+<Line Number="230">
+<![CDATA[Drop_ArmSafety:3:O.1:=IDD_CT_PLCSafety1_SwEPS_BypassLight;     //Bypass light]]>
+</Line>
+<Line Number="231">
+<![CDATA[*)]]>
+</Line>
+<Line Number="232">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Endstation_Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[//Output logic]]>
+</Line>
+<Line Number="1">
+<![CDATA[]]>
+</Line>
+<Line Number="2">
+<![CDATA[//Bridge legs]]>
+</Line>
+<Line Number="3">
+<![CDATA[IDD_ES_DAA1_SVS7_1_DO1 := IDD_ES_BT1_CmdLegRaise_Sts;]]>
+</Line>
+<Line Number="4">
+<![CDATA[]]>
+</Line>
+<Line Number="5">
+<![CDATA[//Air valves]]>
+</Line>
+<Line Number="6">
+<![CDATA[IDD_ES_M5R2T1_SVS1_1_Air_Cmd := IDD_ES_SC1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="7">
+<![CDATA[IDD_ES_3AAR2T1_SVS6_1_Air_Cmd := IDD_ES_3AA1_PBrngCmd_Sts or IDD_ES_SC1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="8">
+<![CDATA[]]>
+</Line>
+<Line Number="9">
+<![CDATA[//Stack lights]]>
+</Line>
+<Line Number="10">
+<![CDATA[TONR_01.PRE := 5000;]]>
+</Line>
+<Line Number="11">
+<![CDATA[TONR_01.Reset := 0;//not IDD_ES_Arm1_CmdBcn_Sts ;]]>
+</Line>
+<Line Number="12">
+<![CDATA[TONR_01.TimerEnable := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="13">
+<![CDATA[TONR(TONR_01);]]>
+</Line>
+<Line Number="14">
+<![CDATA[]]>
+</Line>
+<Line Number="15">
+<![CDATA[IDD_ES_Arm1_BeaconGrn2_Out_Cmd := IDD_CT_PLCSafety1_PermitMotion_Sts and not IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="16">
+<![CDATA[IDD_ES_Arm1_BeaconOrg2_Out_Cmd := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="17">
+<![CDATA[IDD_ES_Arm1_BeaconRed2_Out_Cmd := IDD_CT_PLCSafety1_RedLight_Sts;]]>
+</Line>
+<Line Number="18">
+<![CDATA[IDD_ES_Arm1_BeaconHorn2_Out_Cmd :=TONR_01.TT; ]]>
+</Line>
+<Line Number="19">
+<![CDATA[IDD_ES_Arm1_BeaconGrn3_Out_Cmd := IDD_CT_PLCSafety1_PermitMotion_Sts and not IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="20">
+<![CDATA[IDD_ES_Arm1_BeaconOrg3_Out_Cmd := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="21">
+<![CDATA[IDD_ES_Arm1_BeaconRed3_Out_Cmd := IDD_CT_PLCSafety1_RedLight_Sts;]]>
+</Line>
+<Line Number="22">
+<![CDATA[IDD_ES_Arm1_BeaconHorn3_Out_Cmd := TONR_01.TT;]]>
+</Line>
+<Line Number="23">
+<![CDATA[IDD_ES_Arm1_BeaconGrn1_Out_Cmd := IDD_CT_PLCSafety1_PermitMotion_Sts and not IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="24">
+<![CDATA[IDD_ES_Arm1_BeaconOrg1_Out_Cmd := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="25">
+<![CDATA[IDD_ES_Arm1_BeaconRed1_Out_Cmd := IDD_CT_PLCSafety1_RedLight_Sts;]]>
+</Line>
+<Line Number="26">
+<![CDATA[IDD_ES_Arm1_BeaconHorn1_Out_Cmd := TONR_01.TT;]]>
+</Line>
+<Line Number="27">
+<![CDATA[]]>
+</Line>
+<Line Number="28">
+<![CDATA[//Safety status]]>
+</Line>
+<Line Number="29">
+<![CDATA[edge := Sts_old xor IDD_CT_PLCSafety1_PermitMotion_Sts;]]>
+</Line>
+<Line Number="30">
+<![CDATA[]]>
+</Line>
+<Line Number="31">
+<![CDATA[TONR_GreenBlinking.PRE := 2000;]]>
+</Line>
+<Line Number="32">
+<![CDATA[TONR_GreenBlinking.Reset := edge;]]>
+</Line>
+<Line Number="33">
+<![CDATA[TONR_GreenBlinking.TimerEnable := 1;]]>
+</Line>
+<Line Number="34">
+<![CDATA[TONR(TONR_GreenBlinking);]]>
+</Line>
+<Line Number="35">
+<![CDATA[]]>
+</Line>
+<Line Number="36">
+<![CDATA[GreenBlinking := TONR_GreenBlinking.TT;]]>
+</Line>
+<Line Number="37">
+<![CDATA[GreenSolid := TONR_GreenBlinking.DN and IDD_CT_PLCSafety1_PermitMotion_Sts;]]>
+</Line>
+<Line Number="38">
+<![CDATA[]]>
+</Line>
+<Line Number="39">
+<![CDATA[Sts_old := IDD_CT_PLCSafety1_PermitMotion_Sts;]]>
+</Line>
+<Line Number="40">
+<![CDATA[]]>
+</Line>
+<Line Number="41">
+<![CDATA[//Delta Tau STO]]>
+</Line>
+<Line Number="42">
+<![CDATA[MC10_STO_Temp := IDD_CT_PLCSafety1_SwEPS_Bypass_Sts or (IDD_ES_Mir6_AxS6_MP_SwOvrN and IDD_ES_Mir6_AxS6_MP_SwOvrP and]]>
+</Line>
+<Line Number="43">
+<![CDATA[						IDD_ES_Mir7_AxS6_MP_SwOvrN and IDD_ES_Mir7_AxS6_MP_SwOvrP and]]>
+</Line>
+<Line Number="44">
+<![CDATA[						IDD_ES_Grt1_AxS6_MT_SwOvrN and IDD_ES_Grt1_AxS6_MT_SwOvrP and]]>
+</Line>
+<Line Number="45">
+<![CDATA[						IDD_ES_Grt1_AxS6_GP_SwOvrN and IDD_ES_Grt1_AxS6_GP_SwOvrP);]]>
+</Line>
+<Line Number="46">
+<![CDATA[]]>
+</Line>
+<Line Number="47">
+<![CDATA[MC11_STO_Temp := IDD_CT_PLCSafety1_SwEPS_Bypass_Sts or (IDD_ES_3AA1_AxS6_BTZ_SwOvrN and IDD_ES_3AA1_AxS6_BTZ_SwOvrP and]]>
+</Line>
+<Line Number="48">
+<![CDATA[						IDD_ES_3AA1_AxS6_OVY_SwOvrN and IDD_ES_3AA1_AxS6_OVY_SwOvrP and]]>
+</Line>
+<Line Number="49">
+<![CDATA[						IDD_ES_3AA1_AxS6_IVY_SwOvrN and IDD_ES_3AA1_AxS6_IVY_SwOvrP and]]>
+</Line>
+<Line Number="50">
+<![CDATA[						IDD_ES_DAA1_AxS8_TZ_SwOvrN and IDD_ES_DAA1_AxS8_TZ_SwOvrP);]]>
+</Line>
+<Line Number="51">
+<![CDATA[]]>
+</Line>
+<Line Number="52">
+<![CDATA[TOFR_STO_MC10.PRE := 200;]]>
+</Line>
+<Line Number="53">
+<![CDATA[TOFR_STO_MC10.Reset := 0;//not IDD_ES_Arm1_CmdBcn_Sts ;]]>
+</Line>
+<Line Number="54">
+<![CDATA[TOFR_STO_MC10.TimerEnable := MC10_STO_Temp;]]>
+</Line>
+<Line Number="55">
+<![CDATA[TOFR(TOFR_STO_MC10);]]>
+</Line>
+<Line Number="56">
+<![CDATA[]]>
+</Line>
+<Line Number="57">
+<![CDATA[TOFR_STO_MC11.PRE := 200;]]>
+</Line>
+<Line Number="58">
+<![CDATA[TOFR_STO_MC11.Reset := 0;//not IDD_ES_Arm1_CmdBcn_Sts ;]]>
+</Line>
+<Line Number="59">
+<![CDATA[TOFR_STO_MC11.TimerEnable := MC11_STO_Temp;]]>
+</Line>
+<Line Number="60">
+<![CDATA[TOFR(TOFR_STO_MC11);]]>
+</Line>
+<Line Number="61">
+<![CDATA[]]>
+</Line>
+<Line Number="62">
+<![CDATA[IDD_CT_MC1_CmdSTO_Cmd := 1;]]>
+</Line>
+<Line Number="63">
+<![CDATA[IDD_CT_MC3_CmdSTO_Cmd := 1;]]>
+</Line>
+<Line Number="64">
+<![CDATA[IDD_CT_MC6_CmdSTO_Cmd := 1; //Need to update logic for this]]>
+</Line>
+<Line Number="65">
+<![CDATA[IDD_CT_MC7_CmdSTO_Cmd := 1;]]>
+</Line>
+<Line Number="66">
+<![CDATA[IDD_CT_MC10_CmdSTO_Cmd := TOFR_STO_MC10.DN;]]>
+</Line>
+<Line Number="67">
+<![CDATA[IDD_CT_MC11_CmdSTO_Cmd := TOFR_STO_MC11.DN;]]>
+</Line>
+<Line Number="68">
+<![CDATA[IDD_CT_MC12_CmdSTO_Cmd := 1;]]>
+</Line>
+<Line Number="69">
+<![CDATA[]]>
+</Line>
+<Line Number="70">
+<![CDATA[//Delta Tau Abort]]>
+</Line>
+<Line Number="71">
+<![CDATA[IDD_CT_MC1_CmdAbort_Cmd := 1;]]>
+</Line>
+<Line Number="72">
+<![CDATA[IDD_CT_MC3_CmdAbort_Cmd := 1;]]>
+</Line>
+<Line Number="73">
+<![CDATA[IDD_CT_MC6_CmdAbort_Cmd := 1;  //Need to update logic for this]]>
+</Line>
+<Line Number="74">
+<![CDATA[IDD_CT_MC7_CmdAbort_Cmd := 1;]]>
+</Line>
+<Line Number="75">
+<![CDATA[IDD_CT_MC10_CmdAbort_Cmd := MC10_STO_Temp;]]>
+</Line>
+<Line Number="76">
+<![CDATA[IDD_CT_MC11_CmdAbort_Cmd := MC11_STO_Temp;]]>
+</Line>
+<Line Number="77">
+<![CDATA[IDD_CT_MC12_CmdAbort_Cmd := 1;]]>
+</Line>
+<Line Number="78">
+<![CDATA[]]>
+</Line>
+<Line Number="79">
+<![CDATA[//To CR30 Arm Safety PLC]]>
+</Line>
+<Line Number="80">
+<![CDATA[TEMP1 := IDD_ES_3AA1_AxS6_2T_SwOvrN and IDD_ES_3AA1_AxS6_2T_SwOvrP and]]>
+</Line>
+<Line Number="81">
+<![CDATA[		IDD_ES_3AA1_SwCol and IDD_ES_3AA2_SwCol and]]>
+</Line>
+<Line Number="82">
+<![CDATA[		IDD_ES_3AA3_SwCol and IDD_ES_3AA4_SwCol and]]>
+</Line>
+<Line Number="83">
+<![CDATA[		IDD_ES_DAA1_SwCol;// and IDD_ES_DAA2_SwCol;]]>
+</Line>
+<Line Number="84">
+<![CDATA[]]>
+</Line>
+<Line Number="85">
+<![CDATA[//TEMP2 := IDD_ES_Grt1_AxS1_GP_SwColNC;]]>
+</Line>
+<Line Number="86">
+<![CDATA[//What are these PV that should be part of this signal?]]>
+</Line>
+<Line Number="87">
+<![CDATA[//XF:02IDD-ES{BT:1}Sw:BlwsU-Sts]]>
+</Line>
+<Line Number="88">
+<![CDATA[//XF:02IDD-ES{BT:1}Sw:BlwsD-Sts]]>
+</Line>
+<Line Number="89">
+<![CDATA[]]>
+</Line>
+<Line Number="90">
+<![CDATA[IDD_CT_PLCSafety1_EnblSafety_Sts := TEMP1 or IDD_CT_PLCSafety1_SwEPS_Bypass_Sts; //Need to add this bit to EPICS]]>
+</Line>
+<Line Number="91">
+<![CDATA[]]>
+</Line>
+<Line Number="92">
+<![CDATA[//Status signals to Delta Taus]]>
+</Line>
+<Line Number="93">
+<![CDATA[IDD_ES_SC1_PBrng_Sts := IDD_ES_Mir5_AxS1_2T_SwAirP1 and IDD_ES_Mir5_AxS1_2T_SwAirP2 and]]>
+</Line>
+<Line Number="94">
+<![CDATA[						IDD_ES_Mir5_AxS1_2T_SwAirP3 and IDD_ES_3AA1_PBrng_Sts;]]>
+</Line>
+<Line Number="95">
+<![CDATA[IDD_ES_3AA1_PBrng_Sts := IDD_ES_3AA1_AxS6_2T_SwAirP1 and IDD_ES_3AA1_AxS6_2T_SwAirP2 and ]]>
+</Line>
+<Line Number="96">
+<![CDATA[						IDD_ES_3AA1_AxS6_2T_SwAirP3 and IDD_ES_3AA1_AxS6_2T_SwAirP4 and ]]>
+</Line>
+<Line Number="97">
+<![CDATA[						IDD_ES_3AA1_AxS6_2T_SwAirP5 and IDD_ES_3AA1_AxS6_2T_SwAirP6;]]>
+</Line>
+<Line Number="98">
+<![CDATA[IDD_ES_BT1_OutLeg_Sts := IDD_ES_BT1_SwLeg1_Sts and IDD_ES_BT1_SwLeg2_Sts and]]>
+</Line>
+<Line Number="99">
+<![CDATA[						IDD_ES_BT1_SwLeg3_Sts and IDD_ES_BT1_SwLeg4_Sts and]]>
+</Line>
+<Line Number="100">
+<![CDATA[						IDD_ES_BT1_SwLeg5_Sts and IDD_ES_BT1_SwLeg6_Sts;]]>
+</Line>
+<Line Number="101">
+<![CDATA[IDD_ES_DC1_OutFreeN_Sts := IDD_ES_DAA1_AxS8_2T_SwFreeN;]]>
+</Line>
+<Line Number="102">
+<![CDATA[IDD_ES_DC1_OutFreeP_Sts := IDD_ES_DAA1_AxS8_2T_SwFreeP;]]>
+</Line>
+<Line Number="103">
+<![CDATA[IDD_ES_3AA1_SwFreeN_Sts := IDD_ES_3AA1_AxS6_2T_SwFreeN;]]>
+</Line>
+<Line Number="104">
+<![CDATA[IDD_ES_3AA1_SwFreeP_Sts := IDD_ES_3AA1_AxS6_2T_SwFreeP;]]>
+</Line>
+<Line Number="105">
+<![CDATA[IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts := IDD_ES_Grt1_AxS6_Trans_SwFreeN;]]>
+</Line>
+<Line Number="106">
+<![CDATA[IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts := IDD_ES_Grt1_AxS6_Trans_SwFreeP;]]>
+</Line>
+<Line Number="107">
+<![CDATA[]]>
+</Line>
+<Line Number="108">
+<![CDATA[//Other outputs]]>
+</Line>
+<Line Number="109">
+<![CDATA[IDD_CT_PLCSafety1_SwEPS_BypassLight := IDD_CT_PLCSafety1_SwEPS_Bypass_Sts;]]>
+</Line>
+</STContent>
+</Routine>
+<Routine Name="Main_EndStation" Type="RLL">
+<RLLContent>
+<Rung Number="0" Type="N">
+<Text>
+<![CDATA[JSR(Endstation_IOMap,0);]]>
+</Text>
+</Rung>
+<Rung Number="1" Type="N">
+<Text>
+<![CDATA[JSR(Endstation_Logic,0);]]>
+</Text>
+</Rung>
+<Rung Number="2" Type="N">
+<Text>
+<![CDATA[JSR(SharedConversion,0);]]>
+</Text>
+</Rung>
+</RLLContent>
+</Routine>
+<Routine Name="SharedConversion" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[Misc_Sts_1.0 := IDD_ES_3AA1_AxS6_2T_SwAirP1;]]>
+</Line>
+<Line Number="1">
+<![CDATA[Misc_Sts_1.1 := IDD_ES_3AA1_AxS6_2T_SwAirP2;]]>
+</Line>
+<Line Number="2">
+<![CDATA[Misc_Sts_1.2 := IDD_ES_3AA1_AxS6_2T_SwAirP3;]]>
+</Line>
+<Line Number="3">
+<![CDATA[Misc_Sts_1.3 := IDD_ES_3AA1_AxS6_2T_SwAirP4;]]>
+</Line>
+<Line Number="4">
+<![CDATA[Misc_Sts_1.4 := IDD_ES_3AA1_AxS6_2T_SwAirP5;]]>
+</Line>
+<Line Number="5">
+<![CDATA[Misc_Sts_1.5 := IDD_ES_3AA1_AxS6_2T_SwAirP6;]]>
+</Line>
+<Line Number="6">
+<![CDATA[Misc_Sts_1.6 := IDD_ES_3AAR2T1_SVS6_1_Air_Cmd;]]>
+</Line>
+<Line Number="7">
+<![CDATA[Misc_Sts_1.7 := IDD_ES_Arm1_BeaconGrn2_Out_Cmd;]]>
+</Line>
+<Line Number="8">
+<![CDATA[Misc_Sts_1.8 := IDD_ES_Arm1_BeaconOrg2_Out_Cmd;]]>
+</Line>
+<Line Number="9">
+<![CDATA[Misc_Sts_1.9 := IDD_ES_Arm1_BeaconRed2_Out_Cmd;]]>
+</Line>
+<Line Number="10">
+<![CDATA[Misc_Sts_1.10 := IDD_ES_Arm1_BeaconHorn2_Out_Cmd;]]>
+</Line>
+<Line Number="11">
+<![CDATA[Misc_Sts_1.11 := IDD_ES_Safety_SwEStop01_Sts;]]>
+</Line>
+<Line Number="12">
+<![CDATA[Misc_Sts_1.12 := IDD_ES_Safety_SwEStop02_Sts;]]>
+</Line>
+<Line Number="13">
+<![CDATA[Misc_Sts_1.13 := IDD_ES_Safety_SwEStop03_Sts;]]>
+</Line>
+<Line Number="14">
+<![CDATA[Misc_Sts_1.14 := IDD_ES_Safety_SwEStop04_Sts;]]>
+</Line>
+<Line Number="15">
+<![CDATA[Misc_Sts_1.15 := IDD_ES_Safety_SwEStop05_Sts;]]>
+</Line>
+<Line Number="16">
+<![CDATA[Misc_Sts_1.16 := IDD_ES_Safety_SwEStop06_Sts;]]>
+</Line>
+<Line Number="17">
+<![CDATA[Misc_Sts_1.17 := IDD_ES_Safety_SwEStop07_Sts;]]>
+</Line>
+<Line Number="18">
+<![CDATA[Misc_Sts_1.18 := IDD_ES_Safety_SwEStop08_Sts;]]>
+</Line>
+<Line Number="19">
+<![CDATA[Misc_Sts_1.19 := IDD_ES_Safety_SwEStop09_Sts;]]>
+</Line>
+<Line Number="20">
+<![CDATA[Misc_Sts_1.20 := IDD_ES_Safety_SwEStop10_Sts;]]>
+</Line>
+<Line Number="21">
+<![CDATA[Misc_Sts_1.21 := IDD_ES_Arm1_SwSftyEdge1_Sts;]]>
+</Line>
+<Line Number="22">
+<![CDATA[Misc_Sts_1.22 := IDD_ES_Arm1_SwSftyEdge2_Sts;]]>
+</Line>
+<Line Number="23">
+<![CDATA[Misc_Sts_1.23 := IDD_CT_PLCSafety1_StsILockOK_Sts;]]>
+</Line>
+<Line Number="24">
+<![CDATA[Misc_Sts_1.24 := IDD_CT_PLCSafety1_RedLight_Sts;]]>
+</Line>
+<Line Number="25">
+<![CDATA[Misc_Sts_1.25 := IDD_CT_PLCSafety1_PermitMotion_Sts;]]>
+</Line>
+<Line Number="26">
+<![CDATA[Misc_Sts_1.26 := IDD_CT_PLCSafety1_SwEPS_Bypass_Sts;]]>
+</Line>
+<Line Number="27">
+<![CDATA[Misc_Sts_1.27 := IDD_CT_PLCSafety1_EnblSafety_Sts;]]>
+</Line>
+<Line Number="28">
+<![CDATA[Misc_Sts_1.28 := IDD_ES_Arm1_BeaconGrn3_Out_Cmd;]]>
+</Line>
+<Line Number="29">
+<![CDATA[Misc_Sts_1.29 := IDD_ES_Arm1_BeaconOrg3_Out_Cmd;]]>
+</Line>
+<Line Number="30">
+<![CDATA[Misc_Sts_1.30 := IDD_ES_Arm1_BeaconRed3_Out_Cmd;]]>
+</Line>
+<Line Number="31">
+<![CDATA[Misc_Sts_1.31 := IDD_ES_Arm1_BeaconHorn3_Out_Cmd;]]>
+</Line>
+<Line Number="32">
+<![CDATA[Misc_Sts_2.0 := IDD_ES_Arm1_BeaconGrn1_Out_Cmd;]]>
+</Line>
+<Line Number="33">
+<![CDATA[Misc_Sts_2.1 := IDD_ES_Arm1_BeaconOrg1_Out_Cmd;]]>
+</Line>
+<Line Number="34">
+<![CDATA[Misc_Sts_2.2 := IDD_ES_Arm1_BeaconRed1_Out_Cmd;]]>
+</Line>
+<Line Number="35">
+<![CDATA[Misc_Sts_2.3 := IDD_ES_Arm1_BeaconHorn1_Out_Cmd;]]>
+</Line>
+<Line Number="36">
+<![CDATA[Misc_Sts_2.4 := IDD_ES_Mir6_AxS6_MP_SwOvrN;]]>
+</Line>
+<Line Number="37">
+<![CDATA[Misc_Sts_2.5 := IDD_ES_Mir6_AxS6_MP_SwOvrP;]]>
+</Line>
+<Line Number="38">
+<![CDATA[Misc_Sts_2.6 := IDD_ES_Mir7_AxS6_MP_SwOvrN;]]>
+</Line>
+<Line Number="39">
+<![CDATA[Misc_Sts_2.7 := IDD_ES_Mir7_AxS6_MP_SwOvrP;]]>
+</Line>
+<Line Number="40">
+<![CDATA[Misc_Sts_2.8 := IDD_ES_Grt1_AxS6_MT_SwOvrN;]]>
+</Line>
+<Line Number="41">
+<![CDATA[Misc_Sts_2.9 := IDD_ES_Grt1_AxS6_MT_SwOvrP;]]>
+</Line>
+<Line Number="42">
+<![CDATA[Misc_Sts_2.10 := IDD_ES_Grt1_AxS6_GP_SwOvrN;]]>
+</Line>
+<Line Number="43">
+<![CDATA[Misc_Sts_2.11 := IDD_ES_Grt1_AxS6_GP_SwOvrP;]]>
+</Line>
+<Line Number="44">
+<![CDATA[Misc_Sts_2.12 := IDD_ES_3AA1_AxS6_BTZ_SwOvrN;]]>
+</Line>
+<Line Number="45">
+<![CDATA[Misc_Sts_2.13 := IDD_ES_3AA1_AxS6_BTZ_SwOvrP;]]>
+</Line>
+<Line Number="46">
+<![CDATA[Misc_Sts_2.14 := IDD_ES_3AA1_AxS6_OVY_SwOvrN;]]>
+</Line>
+<Line Number="47">
+<![CDATA[Misc_Sts_2.15 := IDD_ES_3AA1_AxS6_OVY_SwOvrP;]]>
+</Line>
+<Line Number="48">
+<![CDATA[Misc_Sts_2.16 := IDD_ES_3AA1_AxS6_IVY_SwOvrN;]]>
+</Line>
+<Line Number="49">
+<![CDATA[Misc_Sts_2.17 := IDD_ES_3AA1_AxS6_IVY_SwOvrP;]]>
+</Line>
+<Line Number="50">
+<![CDATA[Misc_Sts_2.18 := IDD_ES_3AA1_AxS6_2T_SwOvrN;]]>
+</Line>
+<Line Number="51">
+<![CDATA[Misc_Sts_2.19 := IDD_ES_3AA1_AxS6_2T_SwOvrP;]]>
+</Line>
+<Line Number="52">
+<![CDATA[Misc_Sts_2.20 := IDD_ES_DAA1_AxS8_TZ_SwOvrN;]]>
+</Line>
+<Line Number="53">
+<![CDATA[Misc_Sts_2.21 := IDD_ES_DAA1_AxS8_TZ_SwOvrP;]]>
+</Line>
+<Line Number="54">
+<![CDATA[Misc_Sts_2.22 := IDD_ES_Grt1_AxS6_Trans_SwFreeN;]]>
+</Line>
+<Line Number="55">
+<![CDATA[Misc_Sts_2.23 := IDD_ES_Grt1_AxS6_Trans_SwFreeP;]]>
+</Line>
+<Line Number="56">
+<![CDATA[Misc_Sts_2.24 := IDD_ES_DAA1_AxS8_Trans_SwFreeN;]]>
+</Line>
+<Line Number="57">
+<![CDATA[Misc_Sts_2.25 := IDD_ES_DAA1_AxS8_Trans_SwFreeP;]]>
+</Line>
+<Line Number="58">
+<![CDATA[Misc_Sts_2.26 := IDD_ES_3AA1_AxS6_2T_SwFreeN;]]>
+</Line>
+<Line Number="59">
+<![CDATA[Misc_Sts_2.27 := IDD_ES_3AA1_AxS6_2T_SwFreeP;]]>
+</Line>
+<Line Number="60">
+<![CDATA[Misc_Sts_2.28 := IDD_ES_Grt1_AxS1_GP_SwColNC;]]>
+</Line>
+<Line Number="61">
+<![CDATA[Misc_Sts_2.29 := IDD_ES_Grt1_AxS1_GP_SwColNO;]]>
+</Line>
+<Line Number="62">
+<![CDATA[Misc_Sts_2.30 := IDD_ES_3AA1_SwCol;]]>
+</Line>
+<Line Number="63">
+<![CDATA[Misc_Sts_2.31 := IDD_ES_3AA2_SwCol;]]>
+</Line>
+<Line Number="64">
+<![CDATA[Misc_Sts_3.0 := IDD_ES_3AA3_SwCol;]]>
+</Line>
+<Line Number="65">
+<![CDATA[Misc_Sts_3.1 := IDD_ES_3AA4_SwCol;]]>
+</Line>
+<Line Number="66">
+<![CDATA[Misc_Sts_3.2 := IDD_ES_DAA1_AxS8_2T_SwFreeN;]]>
+</Line>
+<Line Number="67">
+<![CDATA[Misc_Sts_3.3 := IDD_ES_DAA1_AxS8_2T_SwFreeP;]]>
+</Line>
+<Line Number="68">
+<![CDATA[Misc_Sts_3.4 := IDD_ES_DAA1_SwCol;]]>
+</Line>
+<Line Number="69">
+<![CDATA[Misc_Sts_3.5 := IDD_ES_DAA2_SwCol;]]>
+</Line>
+<Line Number="70">
+<![CDATA[Misc_Sts_3.6 := IDD_CT_MC1_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="71">
+<![CDATA[Misc_Sts_3.7 := IDD_CT_MC3_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="72">
+<![CDATA[Misc_Sts_3.8 := IDD_CT_MC6_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="73">
+<![CDATA[Misc_Sts_3.9 := IDD_CT_MC7_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="74">
+<![CDATA[Misc_Sts_3.10 := IDD_CT_MC10_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="75">
+<![CDATA[Misc_Sts_3.11 := IDD_CT_MC11_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="76">
+<![CDATA[Misc_Sts_3.12 := IDD_CT_MC12_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="77">
+<![CDATA[Misc_Sts_3.13 := IDD_CT_MC1_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="78">
+<![CDATA[Misc_Sts_3.14 := IDD_CT_MC3_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="79">
+<![CDATA[Misc_Sts_3.15 := IDD_CT_MC6_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="80">
+<![CDATA[Misc_Sts_3.16 := IDD_CT_MC7_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="81">
+<![CDATA[Misc_Sts_3.17 := IDD_CT_MC10_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="82">
+<![CDATA[Misc_Sts_3.18 := IDD_CT_MC11_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="83">
+<![CDATA[Misc_Sts_3.19 := IDD_CT_MC12_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="84">
+<![CDATA[Misc_Sts_3.20 := IDD_ES_SC1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="85">
+<![CDATA[Misc_Sts_3.21 := IDD_ES_3AA1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="86">
+<![CDATA[Misc_Sts_3.22 := IDD_ES_BT1_CmdLegRaise_Sts;]]>
+</Line>
+<Line Number="87">
+<![CDATA[Misc_Sts_3.23 := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="88">
+<![CDATA[Misc_Sts_3.24 := IDD_ES_SC1_PBrng_Sts;]]>
+</Line>
+<Line Number="89">
+<![CDATA[Misc_Sts_3.25 := IDD_ES_BT1_OutLeg_Sts;]]>
+</Line>
+<Line Number="90">
+<![CDATA[Misc_Sts_3.26 := IDD_ES_DC1_OutFreeN_Sts;]]>
+</Line>
+<Line Number="91">
+<![CDATA[Misc_Sts_3.27 := IDD_ES_DC1_OutFreeP_Sts;]]>
+</Line>
+<Line Number="92">
+<![CDATA[Misc_Sts_3.28 := IDD_ES_3AA1_PBrng_Sts;]]>
+</Line>
+<Line Number="93">
+<![CDATA[Misc_Sts_3.29 := IDD_ES_3AA1_SwFreeN_Sts;]]>
+</Line>
+<Line Number="94">
+<![CDATA[Misc_Sts_3.30 := IDD_ES_3AA1_SwFreeP_Sts;]]>
+</Line>
+<Line Number="95">
+<![CDATA[Misc_Sts_3.31 := IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts;]]>
+</Line>
+<Line Number="96">
+<![CDATA[Misc_Sts_4.0 := IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts;]]>
+</Line>
+<Line Number="97">
+<![CDATA[Misc_Sts_4.1 := IDD_ES_Mir5_AxS1_2T_SwAirP1;]]>
+</Line>
+<Line Number="98">
+<![CDATA[Misc_Sts_4.2 := IDD_ES_Mir5_AxS1_2T_SwAirP2;]]>
+</Line>
+<Line Number="99">
+<![CDATA[Misc_Sts_4.3 := IDD_ES_Mir5_AxS1_2T_SwAirP3;]]>
+</Line>
+<Line Number="100">
+<![CDATA[Misc_Sts_4.4 := IDD_ES_M5R2T1_SVS1_1_Air_Cmd;]]>
+</Line>
+<Line Number="101">
+<![CDATA[Misc_Sts_4.5 := IDD_ES_DAA1_SVS7_1_DO1;]]>
+</Line>
+<Line Number="102">
+<![CDATA[Misc_Sts_4.6 := IDD_ES_BT1_SwLeg1_Sts;]]>
+</Line>
+<Line Number="103">
+<![CDATA[Misc_Sts_4.7 := IDD_ES_BT1_SwLeg2_Sts;]]>
+</Line>
+<Line Number="104">
+<![CDATA[Misc_Sts_4.8 := IDD_ES_BT1_SwLeg3_Sts;]]>
+</Line>
+<Line Number="105">
+<![CDATA[Misc_Sts_4.9 := IDD_ES_BT1_SwLeg4_Sts;]]>
+</Line>
+<Line Number="106">
+<![CDATA[Misc_Sts_4.10 := IDD_ES_BT1_SwLeg5_Sts;]]>
+</Line>
+<Line Number="107">
+<![CDATA[Misc_Sts_4.11 := IDD_ES_BT1_SwLeg6_Sts;]]>
+</Line>
+<Line Number="108">
+<![CDATA[Misc_Sts_4.12 := IDD_CT_PLCSafety1_SwEPS_BypassLight;]]>
+</Line>
+<Line Number="109">
+<![CDATA[]]>
+</Line>
+<Line Number="110">
+<![CDATA[(*]]>
+</Line>
+<Line Number="111">
+<![CDATA[Misc_Sts_1.0 := IDD_ES_3AA1_AxS6_2T_SwAirP1;]]>
+</Line>
+<Line Number="112">
+<![CDATA[Misc_Sts_1.1 := IDD_ES_3AA1_AxS6_2T_SwAirP2;]]>
+</Line>
+<Line Number="113">
+<![CDATA[Misc_Sts_1.2 := IDD_ES_3AA1_AxS6_2T_SwAirP3;]]>
+</Line>
+<Line Number="114">
+<![CDATA[Misc_Sts_1.3 := IDD_ES_3AA1_AxS6_2T_SwAirP4;]]>
+</Line>
+<Line Number="115">
+<![CDATA[Misc_Sts_1.4 := IDD_ES_3AA1_AxS6_2T_SwAirP5;]]>
+</Line>
+<Line Number="116">
+<![CDATA[Misc_Sts_1.5 := IDD_ES_3AA1_AxS6_2T_SwAirP6;]]>
+</Line>
+<Line Number="117">
+<![CDATA[Misc_Sts_1.6 := IDD_ES_3AAR2T1_SVS6_1_Air_Cmd;]]>
+</Line>
+<Line Number="118">
+<![CDATA[Misc_Sts_1.7 := IDD_ES_Arm1_BeaconGrn2_Out_Cmd;]]>
+</Line>
+<Line Number="119">
+<![CDATA[Misc_Sts_1.8 := IDD_ES_Arm1_BeaconOrg2_Out_Cmd;]]>
+</Line>
+<Line Number="120">
+<![CDATA[Misc_Sts_1.9 := IDD_ES_Arm1_BeaconRed2_Out_Cmd;]]>
+</Line>
+<Line Number="121">
+<![CDATA[Misc_Sts_1.10 := IDD_ES_Arm1_BeaconHorn3_Out_Cmd;]]>
+</Line>
+<Line Number="122">
+<![CDATA[Misc_Sts_1.11 := IDD_ES_Safety_SwEStop01_Sts;]]>
+</Line>
+<Line Number="123">
+<![CDATA[Misc_Sts_1.12 := IDD_ES_Safety_SwEStop02_Sts;]]>
+</Line>
+<Line Number="124">
+<![CDATA[Misc_Sts_1.13 := IDD_ES_Safety_SwEStop03_Sts;]]>
+</Line>
+<Line Number="125">
+<![CDATA[Misc_Sts_1.14 := IDD_ES_Safety_SwEStop04_Sts;]]>
+</Line>
+<Line Number="126">
+<![CDATA[Misc_Sts_1.15 := IDD_ES_Safety_SwEStop05_Sts;]]>
+</Line>
+<Line Number="127">
+<![CDATA[Misc_Sts_1.16 := IDD_ES_Safety_SwEStop06_Sts;]]>
+</Line>
+<Line Number="128">
+<![CDATA[Misc_Sts_1.17 := IDD_ES_Safety_SwEStop07_Sts;]]>
+</Line>
+<Line Number="129">
+<![CDATA[Misc_Sts_1.18 := IDD_ES_Safety_SwEStop08_Sts;]]>
+</Line>
+<Line Number="130">
+<![CDATA[Misc_Sts_1.19 := IDD_ES_Safety_SwEStop09_Sts;]]>
+</Line>
+<Line Number="131">
+<![CDATA[Misc_Sts_1.20 := IDD_ES_Safety_SwEStop10_Sts;]]>
+</Line>
+<Line Number="132">
+<![CDATA[Misc_Sts_1.21 := IDD_ES_Arm1_SwSftyEdge1_Sts;]]>
+</Line>
+<Line Number="133">
+<![CDATA[Misc_Sts_1.22 := IDD_ES_Arm1_SwSftyEdge2_Sts;]]>
+</Line>
+<Line Number="134">
+<![CDATA[Misc_Sts_1.23 := IDD_CT_PLCSafety1_StsILockOK_Sts;]]>
+</Line>
+<Line Number="135">
+<![CDATA[Misc_Sts_1.24 := IDD_CT_PLCSafety1_RedLight_Sts;]]>
+</Line>
+<Line Number="136">
+<![CDATA[Misc_Sts_1.25 := IDD_CT_PLCSafety1_PermitMotion_Sts;]]>
+</Line>
+<Line Number="137">
+<![CDATA[Misc_Sts_1.26 := IDD_CT_PLCSafety1_SwEPS_Bypass_Sts;]]>
+</Line>
+<Line Number="138">
+<![CDATA[Misc_Sts_1.27 := IDD_CT_PLCEPS_StsILockOK_Sts;]]>
+</Line>
+<Line Number="139">
+<![CDATA[Misc_Sts_1.28 := IDD_ES_Arm1_BeaconGrn3_Out_Cmd;]]>
+</Line>
+<Line Number="140">
+<![CDATA[Misc_Sts_1.29 := IDD_ES_Arm1_BeaconOrg3_Out_Cmd;]]>
+</Line>
+<Line Number="141">
+<![CDATA[Misc_Sts_1.30 := IDD_ES_Arm1_BeaconRed3_Out_Cmd;]]>
+</Line>
+<Line Number="142">
+<![CDATA[Misc_Sts_1.31 := IDD_ES_Arm1_BeaconHorn3_Out_Cmd;]]>
+</Line>
+<Line Number="143">
+<![CDATA[Misc_Sts_2.0 := IDD_ES_Arm1_BeaconGrn1_Out_Cmd;]]>
+</Line>
+<Line Number="144">
+<![CDATA[Misc_Sts_2.1 := IDD_ES_Arm1_BeaconOrg1_Out_Cmd;]]>
+</Line>
+<Line Number="145">
+<![CDATA[Misc_Sts_2.2 := IDD_ES_Arm1_BeaconRed1_Out_Cmd;]]>
+</Line>
+<Line Number="146">
+<![CDATA[Misc_Sts_2.3 := IDD_ES_Arm1_BeaconHorn1_Out_Cmd;]]>
+</Line>
+<Line Number="147">
+<![CDATA[Misc_Sts_2.4 := IDD_ES_Mir6_AxS6_MP_SwOvrN;]]>
+</Line>
+<Line Number="148">
+<![CDATA[Misc_Sts_2.5 := IDD_ES_Mir6_AxS6_MP_SwOvrP;]]>
+</Line>
+<Line Number="149">
+<![CDATA[Misc_Sts_2.6 := IDD_ES_Mir7_AxS6_MP_SwOvrN;]]>
+</Line>
+<Line Number="150">
+<![CDATA[Misc_Sts_2.7 := IDD_ES_Mir7_AxS6_MP_SwOvrP;]]>
+</Line>
+<Line Number="151">
+<![CDATA[Misc_Sts_2.8 := IDD_ES_Grt1_AxS6_MT_SwOvrN;]]>
+</Line>
+<Line Number="152">
+<![CDATA[Misc_Sts_2.9 := IDD_ES_Grt1_AxS6_MT_SwOvrP;]]>
+</Line>
+<Line Number="153">
+<![CDATA[Misc_Sts_2.10 := IDD_ES_Grt1_AxS6_GP_SwOvrN;]]>
+</Line>
+<Line Number="154">
+<![CDATA[Misc_Sts_2.11 := IDD_ES_Grt1_AxS6_GP_SwOvrP;]]>
+</Line>
+<Line Number="155">
+<![CDATA[Misc_Sts_2.12 := IDD_ES_3AA1_AxS6_BTZ_SwOvrN;]]>
+</Line>
+<Line Number="156">
+<![CDATA[Misc_Sts_2.13 := IDD_ES_3AA1_AxS6_BTZ_SwOvrP;]]>
+</Line>
+<Line Number="157">
+<![CDATA[Misc_Sts_2.14 := IDD_ES_3AA1_AxS6_OVY_SwOvrN;]]>
+</Line>
+<Line Number="158">
+<![CDATA[Misc_Sts_2.15 := IDD_ES_3AA1_AxS6_OVY_SwOvrP;]]>
+</Line>
+<Line Number="159">
+<![CDATA[Misc_Sts_2.16 := IDD_ES_3AA1_AxS6_IVY_SwOvrN;]]>
+</Line>
+<Line Number="160">
+<![CDATA[Misc_Sts_2.17 := IDD_ES_3AA1_AxS6_IVY_SwOvrP;]]>
+</Line>
+<Line Number="161">
+<![CDATA[Misc_Sts_2.18 := IDD_ES_3AA1_AxS6_2T_SwOvrN;]]>
+</Line>
+<Line Number="162">
+<![CDATA[Misc_Sts_2.19 := IDD_ES_3AA1_AxS6_2T_SwOvrP;]]>
+</Line>
+<Line Number="163">
+<![CDATA[Misc_Sts_2.20 := IDD_ES_DAA1_AxS8_TZ_SwOvrN;]]>
+</Line>
+<Line Number="164">
+<![CDATA[Misc_Sts_2.21 := IDD_ES_DAA1_AxS8_TZ_SwOvrP;]]>
+</Line>
+<Line Number="165">
+<![CDATA[Misc_Sts_2.22 := IDD_ES_Grt1_AxS6_Trans_SwFreeN;]]>
+</Line>
+<Line Number="166">
+<![CDATA[Misc_Sts_2.23 := IDD_ES_Grt1_AxS6_Trans_SwFreeP;]]>
+</Line>
+<Line Number="167">
+<![CDATA[Misc_Sts_2.24 := IDD_ES_DAA1_AxS8_Trans_SwFreeN;]]>
+</Line>
+<Line Number="168">
+<![CDATA[Misc_Sts_2.25 := IDD_ES_DAA1_AxS8_Trans_SwFreeP;]]>
+</Line>
+<Line Number="169">
+<![CDATA[Misc_Sts_2.26 := IDD_ES_3AA1_AxS6_2T_SwFreeN;]]>
+</Line>
+<Line Number="170">
+<![CDATA[Misc_Sts_2.27 := IDD_ES_3AA1_AxS6_2T_SwFreeP;]]>
+</Line>
+<Line Number="171">
+<![CDATA[Misc_Sts_2.28 := IDD_ES_Grt1_AxS1_GP_SwColNC;]]>
+</Line>
+<Line Number="172">
+<![CDATA[Misc_Sts_2.29 := IDD_ES_Grt1_AxS1_GP_SwColNO;]]>
+</Line>
+<Line Number="173">
+<![CDATA[Misc_Sts_2.30 := IDD_ES_3AA1_SwCol;]]>
+</Line>
+<Line Number="174">
+<![CDATA[Misc_Sts_2.31 := IDD_ES_3AA2_SwCol;]]>
+</Line>
+<Line Number="175">
+<![CDATA[Misc_Sts_3.0 := IDD_ES_3AA3_SwCol;]]>
+</Line>
+<Line Number="176">
+<![CDATA[Misc_Sts_3.1 := IDD_ES_3AA4_SwCol;]]>
+</Line>
+<Line Number="177">
+<![CDATA[Misc_Sts_3.2 := IDD_ES_DAA1_AxS8_2T_SwFreeN;]]>
+</Line>
+<Line Number="178">
+<![CDATA[Misc_Sts_3.3 := IDD_ES_DAA1_AxS8_2T_SwFreeP;]]>
+</Line>
+<Line Number="179">
+<![CDATA[Misc_Sts_3.4 := IDD_ES_DAA1_SwCol;]]>
+</Line>
+<Line Number="180">
+<![CDATA[Misc_Sts_3.5 := IDD_ES_DAA2_SwCol;]]>
+</Line>
+<Line Number="181">
+<![CDATA[Misc_Sts_3.6 := IDD_CT_MC1_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="182">
+<![CDATA[Misc_Sts_3.7 := IDD_CT_MC3_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="183">
+<![CDATA[Misc_Sts_3.8 := IDD_CT_MC6_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="184">
+<![CDATA[Misc_Sts_3.9 := IDD_CT_MC7_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="185">
+<![CDATA[Misc_Sts_3.10 := IDD_CT_MC10_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="186">
+<![CDATA[Misc_Sts_3.11 := IDD_CT_MC11_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="187">
+<![CDATA[Misc_Sts_3.12 := IDD_CT_MC12_CmdSTO_Cmd;]]>
+</Line>
+<Line Number="188">
+<![CDATA[Misc_Sts_3.13 := IDD_CT_MC1_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="189">
+<![CDATA[Misc_Sts_3.14 := IDD_CT_MC3_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="190">
+<![CDATA[Misc_Sts_3.15 := IDD_CT_MC6_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="191">
+<![CDATA[Misc_Sts_3.16 := IDD_CT_MC7_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="192">
+<![CDATA[Misc_Sts_3.17 := IDD_CT_MC10_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="193">
+<![CDATA[Misc_Sts_3.18 := IDD_CT_MC11_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="194">
+<![CDATA[Misc_Sts_3.19 := IDD_CT_MC12_CmdAbort_Cmd;]]>
+</Line>
+<Line Number="195">
+<![CDATA[Misc_Sts_3.20 := IDD_ES_SC1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="196">
+<![CDATA[Misc_Sts_3.21 := IDD_ES_3AA1_PBrngCmd_Sts;]]>
+</Line>
+<Line Number="197">
+<![CDATA[Misc_Sts_3.22 := IDD_ES_BT1_CmdLegRaise_Sts;]]>
+</Line>
+<Line Number="198">
+<![CDATA[Misc_Sts_3.23 := IDD_ES_Arm1_CmdBcn_Sts;]]>
+</Line>
+<Line Number="199">
+<![CDATA[Misc_Sts_3.24 := IDD_ES_SC1_PBrng_Sts;]]>
+</Line>
+<Line Number="200">
+<![CDATA[Misc_Sts_3.25 := IDD_ES_BT1_OutLeg_Sts;]]>
+</Line>
+<Line Number="201">
+<![CDATA[Misc_Sts_3.26 := IDD_ES_DC1_OutFreeN_Sts;]]>
+</Line>
+<Line Number="202">
+<![CDATA[Misc_Sts_3.27 := IDD_ES_DC1_OutFreeP_Sts;]]>
+</Line>
+<Line Number="203">
+<![CDATA[Misc_Sts_3.28 := IDD_ES_3AA1_PBrng_Sts;]]>
+</Line>
+<Line Number="204">
+<![CDATA[Misc_Sts_3.29 := IDD_ES_3AA1_SwFreeN_Sts;]]>
+</Line>
+<Line Number="205">
+<![CDATA[Misc_Sts_3.30 := IDD_ES_3AA1_SwFreeP_Sts;]]>
+</Line>
+<Line Number="206">
+<![CDATA[Misc_Sts_3.31 := IDD_ES_Mono2_AxGXRaw_OutFreeN_Sts;]]>
+</Line>
+<Line Number="207">
+<![CDATA[Misc_Sts_4.0 := IDD_ES_Mono2_AxGXRaw_OutFreeP_Sts;]]>
+</Line>
+<Line Number="208">
+<![CDATA[Misc_Sts_4.1 := IDD_ES_Mir5_AxS1_2T_SwAirP1;]]>
+</Line>
+<Line Number="209">
+<![CDATA[Misc_Sts_4.2 := IDD_ES_Mir5_AxS1_2T_SwAirP2;]]>
+</Line>
+<Line Number="210">
+<![CDATA[Misc_Sts_4.3 := IDD_ES_Mir5_AxS1_2T_SwAirP3;]]>
+</Line>
+<Line Number="211">
+<![CDATA[Misc_Sts_4.4 := IDD_ES_M5R2T1_SVS1_1_Air_Cmd;*)]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</Program>
+</Programs>
+</Controller>
+</RSLogix5000Content>

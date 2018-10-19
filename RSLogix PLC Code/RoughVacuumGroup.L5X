@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="20.01" TargetName="RoughVacuumGroup" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2018-09-20T20:58:11.911Z" ContainsContext="true" Owner="BNL, Microsoft" ExportDate="Fri Oct 19 01:35:02 2018" ExportOptions="References DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="XF02ID_SIX_EPS">
+<DataTypes Use="Context">
+</DataTypes>
+<AddOnInstructionDefinitions Use="Context">
+<AddOnInstructionDefinition Use="Target" Name="RoughVacuumGroup" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2018-05-07T21:08:03.462Z" CreatedBy="BNL\gbischof" EditedDate="2018-09-20T20:58:11.911Z" EditedBy="BNL\gbischof" SoftwareRevision="v20.01"
+>
+<Parameters>
+<Parameter Name="EnableIn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Input - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="EnableOut" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Enable Output - System Defined Parameter]]>
+</Description>
+</Parameter>
+<Parameter Name="CmdRoughOn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Rough group ON/OFF]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="CmdForceModeRequest" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Force mode request]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Interlock_RoughOK" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Rough vac interlock]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Output_RPOnOff" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Roughing pump ON/OFF Command]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_RPOnSts" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Roughing pump ON/OFF Status]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_RPWarning" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Roughing pump warning]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_RPAlarm" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Roughing pump alarm]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_WFMF_I" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Roughing pump water flow]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_TCGP_I" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Chamber vacuum value TCG]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Output_MainVlvCmd" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Main AV valve command]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_MainVlvOpened" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Main AV valve opened feedback]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Input_MainVlvClosed" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Main AV valve closed feedback]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_RPAlarm" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Alarm signal from roughing pump]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_RPWarning" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Warning signal from roughing pump]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_RPFB" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Roughing pump status feedback error]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_MainVlvFB" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Main AV feedback error]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_WFM" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Roughing pump water flow fault]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Alarm_Timeout" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Rough group timeout error]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="ParamRoughWFMOpti" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Rough WFM option]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_TCGHigh" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TCG High]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_TCGHiHi" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[TCG HiHi]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_WFMLow" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[WFM Low]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_WFMLoLo" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[WFM LoLo]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_RoughTimeout" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Rough vacuum timeout]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Param_RoughMFPort" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Manifold input number: 0 if not connected to manifold]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_ForceModeRequest" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Force mode status]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Rough" TagType="Base" DataType="DINT" Usage="Output" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read Only">
+<Description>
+<![CDATA[Vacuum status: Off, Pumping, Rough Vacuum OK, Stopping]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Force_RPOn" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Roughing pump ON/OFF Force]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Force_MainVlvOpen" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Main AV OPEN/CLOSE Force]]>
+</Description>
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Force_Sts" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="false" Visible="true" ExternalAccess="Read/Write">
+<Description>
+<![CDATA[Vacuum status Force: Off, Pumping, Rough Vacuum OK, Stopping]]>
+</Description>
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="DINT" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_Vacuum_Value" TagType="Base" DataType="BOOL" Usage="Input" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read/Write">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Sts_TCG" TagType="Base" DataType="BOOL" Usage="Output" Radix="Decimal" Required="false" Visible="false" ExternalAccess="Read Only">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</Parameter>
+<Parameter Name="Exchange_USVacP_I" TagType="Base" DataType="REAL" Usage="Input" Radix="Float" Required="true" Visible="true" ExternalAccess="Read/Write">
+<DefaultData>00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="REAL" Radix="Float" Value="0.0"/>
+</DefaultData>
+</Parameter>
+</Parameters>
+<LocalTags>
+<LocalTag Name="Alarm_RPFB_TONR" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Alarm_MainAVFB_TONR" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Alarm_MainVlvFB_TONR" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Sts_WFM" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="HardStopAlarm" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="Alarm_Timeout_TONR" DataType="FBD_TIMER" ExternalAccess="None">
+<DefaultData>01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 04 00 00 00 00 00 00 00 00 00 00 00</DefaultData>
+<DefaultData Format="Decorated">
+<Structure DataType="FBD_TIMER">
+<DataValueMember Name="EnableIn" DataType="BOOL" Value="1"/>
+<DataValueMember Name="TimerEnable" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="Reset" DataType="BOOL" Value="0"/>
+<DataValueMember Name="EnableOut" DataType="BOOL" Value="0"/>
+<DataValueMember Name="ACC" DataType="DINT" Radix="Decimal" Value="0"/>
+<DataValueMember Name="EN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="TT" DataType="BOOL" Value="0"/>
+<DataValueMember Name="DN" DataType="BOOL" Value="0"/>
+<DataValueMember Name="Status" DataType="DINT" Radix="Hex" Value="16#0000_0000"/>
+<DataValueMember Name="InstructFault" DataType="BOOL" Value="0"/>
+<DataValueMember Name="PresetInv" DataType="BOOL" Value="0"/>
+</Structure>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="InputLessThanUS" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CmdRoughOn_Old" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+<LocalTag Name="CmdForceModeRequest_Old" DataType="BOOL" Radix="Decimal" ExternalAccess="None">
+<DefaultData>00</DefaultData>
+<DefaultData Format="Decorated">
+<DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
+</DefaultData>
+</LocalTag>
+</LocalTags>
+<Routines>
+<Routine Name="Logic" Type="ST">
+<STContent>
+<Line Number="0">
+<![CDATA[///// Status //////]]>
+</Line>
+<Line Number="1">
+<![CDATA[Sts_ForceModeRequest := CmdForceModeRequest;]]>
+</Line>
+<Line Number="2">
+<![CDATA[]]>
+</Line>
+<Line Number="3">
+<![CDATA[if Input_TCGP_I < Param_TCGHigh then]]>
+</Line>
+<Line Number="4">
+<![CDATA[	Sts_TCG := 1;]]>
+</Line>
+<Line Number="5">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="6">
+<![CDATA[if Input_TCGP_I > Param_TCGHiHi then]]>
+</Line>
+<Line Number="7">
+<![CDATA[    Sts_TCG := 0;]]>
+</Line>
+<Line Number="8">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="9">
+<![CDATA[]]>
+</Line>
+<Line Number="10">
+<![CDATA[if Input_WFMF_I < Param_WFMLoLo and ParamRoughWFMOpti then]]>
+</Line>
+<Line Number="11">
+<![CDATA[	Sts_WFM := 0;]]>
+</Line>
+<Line Number="12">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="13">
+<![CDATA[if Input_WFMF_I > Param_WFMLow or not ParamRoughWFMOpti then]]>
+</Line>
+<Line Number="14">
+<![CDATA[    Sts_WFM := 1;]]>
+</Line>
+<Line Number="15">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="16">
+<![CDATA[]]>
+</Line>
+<Line Number="17">
+<![CDATA[// 0 = Major alarm present or interlock]]>
+</Line>
+<Line Number="18">
+<![CDATA[// 1 = Off]]>
+</Line>
+<Line Number="19">
+<![CDATA[// 2 = Rough pumping]]>
+</Line>
+<Line Number="20">
+<![CDATA[// 3 = Rough vacuum state]]>
+</Line>
+<Line Number="21">
+<![CDATA[]]>
+</Line>
+<Line Number="22">
+<![CDATA[If not Sts_ForceModeRequest then]]>
+</Line>
+<Line Number="23">
+<![CDATA[	If HardStopAlarm or not Interlock_RoughOK then]]>
+</Line>
+<Line Number="24">
+<![CDATA[		Sts_Rough := 0;]]>
+</Line>
+<Line Number="25">
+<![CDATA[	elsif not CmdRoughOn and not HardStopAlarm and Interlock_RoughOK then]]>
+</Line>
+<Line Number="26">
+<![CDATA[		Sts_Rough := 1;]]>
+</Line>
+<Line Number="27">
+<![CDATA[	elsif CmdRoughOn and not Sts_TCG and not HardStopAlarm and Interlock_RoughOK then]]>
+</Line>
+<Line Number="28">
+<![CDATA[		Sts_Rough := 2;]]>
+</Line>
+<Line Number="29">
+<![CDATA[	elsIf CmdRoughOn and Sts_TCG and not HardStopAlarm and Interlock_RoughOK then]]>
+</Line>
+<Line Number="30">
+<![CDATA[		Sts_Rough := 3;]]>
+</Line>
+<Line Number="31">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="32">
+<![CDATA[	Force_Sts := Sts_Rough;]]>
+</Line>
+<Line Number="33">
+<![CDATA[else]]>
+</Line>
+<Line Number="34">
+<![CDATA[	Sts_Rough := Force_Sts;]]>
+</Line>
+<Line Number="35">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="36">
+<![CDATA[]]>
+</Line>
+<Line Number="37">
+<![CDATA[////// Alarms //////]]>
+</Line>
+<Line Number="38">
+<![CDATA[]]>
+</Line>
+<Line Number="39">
+<![CDATA[// Alarm_RPAlarm]]>
+</Line>
+<Line Number="40">
+<![CDATA[if not Input_RPAlarm then]]>
+</Line>
+<Line Number="41">
+<![CDATA[	Alarm_RPAlarm := 1;]]>
+</Line>
+<Line Number="42">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="43">
+<![CDATA[]]>
+</Line>
+<Line Number="44">
+<![CDATA[// Alarm_RPWarning]]>
+</Line>
+<Line Number="45">
+<![CDATA[if not Input_RPWarning then]]>
+</Line>
+<Line Number="46">
+<![CDATA[	Alarm_RPWarning := 1;]]>
+</Line>
+<Line Number="47">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="48">
+<![CDATA[]]>
+</Line>
+<Line Number="49">
+<![CDATA[// Alarm_WFM]]>
+</Line>
+<Line Number="50">
+<![CDATA[if not Sts_WFM then]]>
+</Line>
+<Line Number="51">
+<![CDATA[	Alarm_WFM := 1;]]>
+</Line>
+<Line Number="52">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="53">
+<![CDATA[]]>
+</Line>
+<Line Number="54">
+<![CDATA[// Alarm_RPFB]]>
+</Line>
+<Line Number="55">
+<![CDATA[Alarm_RPFB_TONR.PRE := 5000;]]>
+</Line>
+<Line Number="56">
+<![CDATA[Alarm_RPFB_TONR.Reset := 0;]]>
+</Line>
+<Line Number="57">
+<![CDATA[Alarm_RPFB_TONR.TimerEnable := (Output_RPOnOff and not Input_RPOnSts);]]>
+</Line>
+<Line Number="58">
+<![CDATA[TONR(Alarm_RPFB_TONR);]]>
+</Line>
+<Line Number="59">
+<![CDATA[If Alarm_RPFB_TONR.DN then]]>
+</Line>
+<Line Number="60">
+<![CDATA[	Alarm_RPFB := 1;]]>
+</Line>
+<Line Number="61">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="62">
+<![CDATA[]]>
+</Line>
+<Line Number="63">
+<![CDATA[// Alarm_MainVlvFB]]>
+</Line>
+<Line Number="64">
+<![CDATA[Alarm_MainVlvFB_TONR.PRE := 3000;]]>
+</Line>
+<Line Number="65">
+<![CDATA[Alarm_MainVlvFB_TONR.Reset := 0;]]>
+</Line>
+<Line Number="66">
+<![CDATA[Alarm_MainVlvFB_TONR.TimerEnable := ((Output_MainVlvCmd and not Input_MainVlvOpened) or (not Output_MainVlvCmd and not Input_MainVlvClosed));]]>
+</Line>
+<Line Number="67">
+<![CDATA[TONR(Alarm_MainVlvFB_TONR);]]>
+</Line>
+<Line Number="68">
+<![CDATA[if Alarm_MainVlvFB_TONR.DN then]]>
+</Line>
+<Line Number="69">
+<![CDATA[	Alarm_MainVlvFB := 1;]]>
+</Line>
+<Line Number="70">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="71">
+<![CDATA[]]>
+</Line>
+<Line Number="72">
+<![CDATA[// Alarm_Timeout]]>
+</Line>
+<Line Number="73">
+<![CDATA[Alarm_Timeout_TONR.PRE := Param_RoughTimeout;]]>
+</Line>
+<Line Number="74">
+<![CDATA[Alarm_Timeout_TONR.Reset := 0;]]>
+</Line>
+<Line Number="75">
+<![CDATA[Alarm_Timeout_TONR.TimerEnable := (Sts_Rough = 2);]]>
+</Line>
+<Line Number="76">
+<![CDATA[TONR(Alarm_Timeout_TONR);]]>
+</Line>
+<Line Number="77">
+<![CDATA[If Alarm_Timeout_TONR.DN then]]>
+</Line>
+<Line Number="78">
+<![CDATA[	Alarm_Timeout := 1;]]>
+</Line>
+<Line Number="79">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="80">
+<![CDATA[]]>
+</Line>
+<Line Number="81">
+<![CDATA[HardStopAlarm := Alarm_WFM or Alarm_MainVlvFB or Alarm_RPFB or Alarm_RPAlarm;]]>
+</Line>
+<Line Number="82">
+<![CDATA[]]>
+</Line>
+<Line Number="83">
+<![CDATA[/////// Outputs //////]]>
+</Line>
+<Line Number="84">
+<![CDATA[If Input_TCGP_I < (0.95 * Exchange_USVacP_I) then]]>
+</Line>
+<Line Number="85">
+<![CDATA[	InputLessThanUS := 1;]]>
+</Line>
+<Line Number="86">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="87">
+<![CDATA[If Input_TCGP_I > (1.3 * Exchange_USVacP_I) or not Output_RPOnOff then]]>
+</Line>
+<Line Number="88">
+<![CDATA[	InputLessThanUS := 0;]]>
+</Line>
+<Line Number="89">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="90">
+<![CDATA[]]>
+</Line>
+<Line Number="91">
+<![CDATA[if not CmdForceModeRequest then]]>
+</Line>
+<Line Number="92">
+<![CDATA[]]>
+</Line>
+<Line Number="93">
+<![CDATA[	If CmdRoughOn and Interlock_RoughOK and not HardStopAlarm then]]>
+</Line>
+<Line Number="94">
+<![CDATA[		Output_RPOnOff := 1;]]>
+</Line>
+<Line Number="95">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="96">
+<![CDATA[]]>
+</Line>
+<Line Number="97">
+<![CDATA[	if (Input_MainVlvClosed or Alarm_MainVlvFB) and (not CmdRoughOn or not Interlock_RoughOK or HardStopAlarm) then]]>
+</Line>
+<Line Number="98">
+<![CDATA[		Output_RPOnOff := 0;]]>
+</Line>
+<Line Number="99">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="100">
+<![CDATA[ ]]>
+</Line>
+<Line Number="101">
+<![CDATA[	//Output_MainVlvCmd := CmdRoughOn and Interlock_RoughOK and not HardStopAlarm and Input_RPOnSts and (InputLessThanUS or Sts_TCG);]]>
+</Line>
+<Line Number="102">
+<![CDATA[	]]>
+</Line>
+<Line Number="103">
+<![CDATA[	if CmdRoughOn and Interlock_RoughOK and not HardStopAlarm and Input_RPOnSts and (InputLessThanUS or Sts_TCG) then]]>
+</Line>
+<Line Number="104">
+<![CDATA[		Output_MainVlvCmd := 1;]]>
+</Line>
+<Line Number="105">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="106">
+<![CDATA[	if not CmdRoughOn or not Interlock_RoughOK or HardStopAlarm or not Input_RPOnSts then]]>
+</Line>
+<Line Number="107">
+<![CDATA[		Output_MainVlvCmd := 0;]]>
+</Line>
+<Line Number="108">
+<![CDATA[	end_if;]]>
+</Line>
+<Line Number="109">
+<![CDATA[]]>
+</Line>
+<Line Number="110">
+<![CDATA[	Force_RPOn := Output_RPOnOff;]]>
+</Line>
+<Line Number="111">
+<![CDATA[	Force_MainVlvOpen := Output_MainVlvCmd;]]>
+</Line>
+<Line Number="112">
+<![CDATA[else]]>
+</Line>
+<Line Number="113">
+<![CDATA[	Output_RPOnOff := Force_RPOn and Sts_WFM;]]>
+</Line>
+<Line Number="114">
+<![CDATA[	Output_MainVlvCmd := Force_MainVlvOpen;]]>
+</Line>
+<Line Number="115">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="116">
+<![CDATA[]]>
+</Line>
+<Line Number="117">
+<![CDATA[//Alarm reset]]>
+</Line>
+<Line Number="118">
+<![CDATA[if (not CmdRoughOn_Old and CmdRoughOn) or (not CmdForceModeRequest_Old and CmdForceModeRequest) then]]>
+</Line>
+<Line Number="119">
+<![CDATA[	Alarm_RPAlarm := 0;]]>
+</Line>
+<Line Number="120">
+<![CDATA[	Alarm_RPWarning := 0;]]>
+</Line>
+<Line Number="121">
+<![CDATA[	Alarm_WFM := 0;]]>
+</Line>
+<Line Number="122">
+<![CDATA[	Alarm_RPFB := 0;]]>
+</Line>
+<Line Number="123">
+<![CDATA[	Alarm_MainVlvFB := 0;]]>
+</Line>
+<Line Number="124">
+<![CDATA[	Alarm_Timeout := 0;]]>
+</Line>
+<Line Number="125">
+<![CDATA[end_if;]]>
+</Line>
+<Line Number="126">
+<![CDATA[]]>
+</Line>
+<Line Number="127">
+<![CDATA[CmdRoughOn_Old := CmdRoughOn;]]>
+</Line>
+<Line Number="128">
+<![CDATA[CmdForceModeRequest_Old := CmdForceModeRequest;]]>
+</Line>
+<Line Number="129">
+<![CDATA[]]>
+</Line>
+<Line Number="130">
+<![CDATA[]]>
+</Line>
+<Line Number="131">
+<![CDATA[]]>
+</Line>
+</STContent>
+</Routine>
+</Routines>
+</AddOnInstructionDefinition>
+</AddOnInstructionDefinitions>
+</Controller>
+</RSLogix5000Content>
