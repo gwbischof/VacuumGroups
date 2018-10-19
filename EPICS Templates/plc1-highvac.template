@@ -1,0 +1,624 @@
+record(bi, "$(Sys){$(Dev)}In-Turbo:AtSpeed")
+{
+field(DESC, "Turbo speed greater than threshold")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TurboAtSpeed S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-Turbo:Error")
+{
+field(DESC, "Turbo pump error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TurboError S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-Turbo:SpeedFB")
+{
+field(DESC, "0-10V = 0-100% of turbo speed setpoint")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TurboSpeedFB S 0.5")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-Turbo:Remote")
+{
+field(DESC, "DI Remote Priority")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_TurboRemote S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-Turbo:VentFB")
+{
+field(DESC, "Accessory Out B1: Status of turbo vent valve")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TurboVentFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-Turbo:VentEnable")
+{
+field(DESC, "DI1: Enable auto venting")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_TurboVentEnable S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-Turbo:OnOff")
+{
+field(DESC, "DI Pumping Station")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_TurboOnOff S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-MainVlv:Cmd")
+{
+field(DESC, "Main GV valve command")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_MainVlvCmd S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-MainVlv:Opened")
+{
+field(DESC, "Main GV valve opened feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_MainVlvOpened S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-MainVlv:Closed")
+{
+field(DESC, "Main GV valve closed feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_MainVlvClosed S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-TCG:P-I")
+{
+field(DESC, "Chamber vacuum value TCG")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TCGP_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-RoughTCG:P-I")
+{
+field(DESC, "Chamber vacuum value TCG")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_RoughTCGP_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-CCG:P-I")
+{
+field(DESC, "Chamber vacuum value CCG")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_CCGP_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-GN2:P-I")
+{
+field(DESC, "GN2 pressure PSIG")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_GN2P_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-GN2Vlv:Cmd")
+{
+field(DESC, "Gaseous nitrogen isolation valve")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_GN2VlvCmd S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-GN2Vlv:Opened")
+{
+field(DESC, "Gaseous nitrogen isolation valve opened feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_GN2VlvOpened S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-GN2Vlv:Closed")
+{
+field(DESC, "Gaseous nitrogen isolation valve closed feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_GN2VlvClosed S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-Turbo:Alarm")
+{
+field(DESC, "Turbo pump alarm")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_TurboAlarm S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-Turbo:FB")
+{
+field(DESC, "Turbo pump status feedback error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_TurboFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-MainVlv:FB")
+{
+field(DESC, "Main valve feedback error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_MainVlvFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-GN2Pressure")
+{
+field(DESC, "GN2 pressure alarm")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_GN2Pressure S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-GN2Vlv:FB")
+{
+field(DESC, "Gaseous nitrogen isolation valve")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_GN2VlvFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-HighVac:Timeout")
+{
+field(DESC, "High vacuum group timeout error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_HighVacTimeout S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-RoughVac:Timeout")
+{
+field(DESC, "Rough vacuum timeout error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_RoughVacTimeout S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Param-MainVlvOption")
+{
+field(DESC, "Gate valve option - hard coded")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Param_MainVlvOption S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Param-VentOption")
+{
+field(DESC, "Vent option")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_VentOption S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-GN2:Low")
+{
+field(DESC, "GN2 Low")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_GN2Low S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-GN2:LoLo")
+{
+field(DESC, "GN2 LoLo")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_GN2LoLo S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-GN2:High")
+{
+field(DESC, "GN2 High")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_GN2High S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-GN2:HiHi")
+{
+field(DESC, "GN2 HiHi")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_GN2HiHi S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-TCG:High")
+{
+field(DESC, "TCG High")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_TCGHigh S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-TCG:HiHi")
+{
+field(DESC, "TCG HiHi")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_TCGHiHi S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-CCG:High")
+{
+field(DESC, "CCG High")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_CCGHigh S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-CCG:HiHi")
+{
+field(DESC, "CCG HiHi")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_CCGHiHi S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-HighVac:Timeout")
+{
+field(DESC, "High vacuum timeout")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_HighVacTimeout S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-RoughVac:Timeout")
+{
+field(DESC, "Rough vacuum timeout")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_RoughVacTimeout S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Param-Rough:MFPort")
+{
+field(DESC, "Manifold output connection")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Param_RoughMFPort S 0.5")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Cmd:VacStateRequest")
+{
+field(DESC, "Vacuum state request")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Cmd_VacStateRequest S 0.5")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Cmd:ForceModeRequest")
+{
+field(DESC, "FORCE mode request")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Cmd_ForceModeRequest S 0.5")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Sts-CCG")
+{
+field(DESC, "FORCE mode status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_CCG S 0.5")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Sts-RoughTCG")
+{
+field(DESC, "FORCE mode status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_RoughTCG S 0.5")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Sts:ForceModeRequest")
+{
+field(DESC, "FORCE mode status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_ForceModeRequest S 0.5")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Sts-HighVac")
+{
+field(DESC, "Current vacuum state")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_HighVac S 0.5")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Sts-InStateRequest")
+{
+field(DESC, "Request of state from input vacuum source")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Exchange_InStateRequest S 0.5")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Sts-InState")
+{
+field(DESC, "Feedback of state of input vacuum source")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Exchange_FBInState S 0.5")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-MainVlv:Cmd")
+{
+field(DESC, "Main valve force command")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_MainVlvCmd S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-Turbo:Remote")
+{
+field(DESC, "DI Remote Priority force command")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_TurboRemote S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-Turbo:VentEnable")
+{
+field(DESC, "DI1: Enable auto venting force command")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_TurboVentEnable S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-Turbo:OnOff")
+{
+field(DESC, "Turbo On/Off force command")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_TurboOnOff S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-GN2Vlv:Cmd")
+{
+field(DESC, "Gaseous nitrogen isolation valve force command")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_GN2VlvCmd S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Force-Sts")
+{
+field(DESC, "Vacuum status force")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_Sts S 0.5")
+field(ASG, "EPSEXPERT")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Interlock-Rough")
+{
+field(DESC, "Rough vac interlock OK")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Interlock_RoughOK S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Interlock-HighVac")
+{
+field(DESC, "High vac interlock OK")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Interlock_HighVacOK S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Interlock-MainVlvClose")
+{
+field(DESC, "Main valve interlock - permit to close")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Interlock_MainVlvClose S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+field(ZSV, "MINOR")
+}

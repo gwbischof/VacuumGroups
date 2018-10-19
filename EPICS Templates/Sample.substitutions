@@ -1,0 +1,21 @@
+file plc1-roughvac.template
+{
+pattern
+{	Sys, 		Dev, 			TagPrefix		}
+{	XF02IDD-VA, 	MF1-RoughVac1, 	IDD_VA_MF1_RoughVac1	}
+}
+
+file plc1-highvac.template
+{
+pattern
+{	Sys, 		Dev, 			TagPrefix		}
+{	XF02IDD-VA, 	SC1-HighVac1,		IDD_VA_SC1_HighVac1	}
+{	XF02IDD-VA, 	LL1-HighVac1,		IDD_VA_LL1_HighVac1	}
+}
+
+file plc1-manifold.template
+{
+pattern
+{       Sys,            Dev,                    TagPrefix               }
+{       XF02IDD-VA,    MF1,       	IDD_VA_ES1_MF1	 	}
+}

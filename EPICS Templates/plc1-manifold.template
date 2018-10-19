@@ -1,0 +1,481 @@
+
+record (bo, "$(Sys){$(Dev)}Cmd-ForceModeRequest")
+{
+field (DESC, "Force mode request")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).CmdForceModeRequest S 0.5" )
+field (SCAN, "Passive")
+}
+
+record (bi, "$(Sys){$(Dev)}Sts-MFTCG")
+{
+field (DESC, "Manifold TCG status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Sts_MFTCG S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+
+record (bi, "$(Sys){$(Dev)}Sts-MFCCG")
+{
+field (DESC, "Manifold CCG Status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Sts_MFCCG S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-InVlvs:ActiveCount")
+{
+field (DESC, "Input value count")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_InVlvsActiveCount S 0.5" )
+field (SCAN, "Passive")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-OutVlvs:ActiveCount")
+{
+field (DESC, "Output value count")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_OutVlvsActiveCount S 0.5" )
+field (SCAN, "Passive")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-OutVlvs:SoftActiveMask")
+{
+field (DESC, "Output value soft pump array mask")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_OutVlvsSoftActiveMask S 0.5" )
+field (SCAN, "Passive")
+}
+
+record (ai, "$(Sys){$(Dev)}In-MFTCG:P-I")
+{
+field (DESC, "Manifold TCG feedback")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_MFTCGP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+
+record (ai, "$(Sys){$(Dev)}In-MFCCG:P-I")
+{
+field (DESC, "Manifold CCG feedback")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_MFCCGP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+
+record (waveform, "$(Sys){$(Dev)}In-OutTCGs:P-I")
+{
+field (DESC, "Output TCG array feedback")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "DOUBLE")
+field (INP, "@$(PLC) $(TagPrefix)_Input_OutTCGsP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+
+record (waveform, "$(Sys){$(Dev)}In-OutCCGs:P-I")
+{
+field (DESC, "Output CCG array feedback")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "DOUBLE")
+field (INP, "@$(PLC) $(TagPrefix)_Input_OutCCGsP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+
+record (waveform, "$(Sys){$(Dev)}In-InTCGs:P-I")
+{
+field (DESC, "Input TCG array feedback")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "DOUBLE")
+field (INP, "@$(PLC) $(TagPrefix)_Input_InTCGsP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+record (waveform, "$(Sys){$(Dev)}In-InCCGs:P-I")
+{
+field (DESC, "Input CCG array feedback")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "DOUBLE")
+field (INP, "@$(PLC) $(TagPrefix)_Input_InCCGsP_I S 0.5" )
+field (SCAN, "I/O Intr")
+field (PREC, "2")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-TCG:High")
+{
+field (DESC, "TCG high threshold")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_TCGHigh S 0.5" )
+field (SCAN, "Passive")
+field (PREC, "2")
+}
+
+
+
+record (ao, "$(Sys){$(Dev)}Param-CCG:High")
+{
+field (DESC, "CCG high threshold")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_CCGHigh S 0.5" )
+field (SCAN, "Passive")
+field (PREC, "2")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-TCG:HiHi")
+{
+field (DESC, "TCG hihi threshold")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_TCGHiHi S 0.5" )
+field (SCAN, "Passive")
+field (PREC, "2")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-CCG:HiHi")
+{
+field (DESC, "CCG hihi threshold")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_CCGHiHi S 0.5" )
+field (SCAN, "Passive")
+field (PREC, "2")
+}
+
+record (waveform, "$(Sys){$(Dev)}Cmd-VacStateRequest")
+{
+field (DESC, "Manifold Out array vacuum request")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "LONG")
+field (INP, "@$(PLC) $(TagPrefix)_Cmd_VacStateRequest S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+record (mbbiDirect, "$(Sys){$(Dev)}Out-OutVlvs:Cmd")
+{
+field (DESC, "Output valve command array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Output_OutVlvsCmd B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 16)
+}
+
+record (mbbiDirect, "$(Sys){$(Dev)}Out-OutVlvs:SoftCmd")
+{
+field (DESC, "Output valve soft pump command array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Output_OutVlvsSoftCmd B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-OutVlvs:SoftOpened")
+{
+field (DESC, "Output valve soft pump opened array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_OutVlvsSoftOpened B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-OutVlvs:SoftClosed")
+{
+field (DESC, "Output valve soft pump closed array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_OutVlvsSoftClosed B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-OutVlvs:Opened")
+{
+field (DESC, "Output valve opened array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_OutVlvsOpened B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-OutVlvs:Closed")
+{
+field (DESC, "Output valve closed array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_OutVlvsClosed B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Out-InVlvs:Cmd")
+{
+field (DESC, "Input valve command array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Output_InVlvsCmd B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-InVlvs:Opened")
+{
+field (DESC, "Input valve opened array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_InVlvsOpened B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}In-InVlvs:Closed")
+{
+field (DESC, "Input valve closed array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Input_InVlvsClosed B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Alarm-InVlvs:FB")
+{
+field (DESC, "Input valve feedback error array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Alarm_InVlvsFB B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Alarm-OutVlvs:FB")
+{
+field (DESC, "Output valve feedback error array")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Alarm_OutVlvsFB B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Sts-OutTCGs")
+{
+field (DESC, "Output TCG array status")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Sts_OutTCGs B 0 S 0.5" )
+field (SCAN, "Passive")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Sts-OutCCGs")
+{
+field (DESC, "Output CCG array status")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Sts_OutCCGs B 0 S 0.5" )
+field (SCAN, "Passive")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Sts-InTCGs")
+{
+field (DESC, "Input TCG array status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Sts_InTCGs B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Sts-InCCGs")
+{
+field (DESC, "Input CCG array status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Sts_InCCGs B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+record (waveform, "$(Sys){$(Dev)}Sts-OutStates")
+{
+field (DESC, "Manifold Output array vacuum status")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (FTVL, "LONG")
+field (PREC, "0")
+field (INP, "@$(PLC) $(TagPrefix)_Sts_OutStates S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+record (waveform, "$(Sys){$(Dev)}Sts-InStates")
+{
+field (DESC, "Manifold Input array vacuum status")
+field (DTYP, "EtherIP")
+field (NELM, "32")
+field (PREC, "0")
+field (FTVL, "LONG")
+field (INP, "@$(PLC) $(TagPrefix)_Sts_FBOfInStates S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+
+record (ai, "$(Sys){$(Dev)}Sts-InStateRequest")
+{
+field (DESC, "Manifold request for state from slaves")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Sts_InStateRequests B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Sts-MasterBlock")
+{
+field (DESC, "Manifold master blocking status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix)_Sts_MasterBlock B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbboDirect, "$(Sys){$(Dev)}Force-InVlvs:Open")
+{
+field (DESC, "Input valve array force command")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Force_InVlvsOpen B 0 S 0.5" )
+field (SCAN, "Passive")
+field (NOBT, 32)
+}
+
+
+record (mbboDirect, "$(Sys){$(Dev)}Force-OutVlvs:Open")
+{
+field (DESC, "Output valve array force command")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Force_OutVlvsOpen B 0 S 0.5" )
+field (SCAN, "Passive")
+field (NOBT, 32)
+}
+
+
+record (mbboDirect, "$(Sys){$(Dev)}Force-OutVlvs:SlowPump")
+{
+field (DESC, "Output valve array soft pump force command")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Force_OutVlvsSlowPump B 0 S 0.5" )
+field (SCAN, "Passive")
+field (NOBT, 32)
+}
+
+record (waveform, "$(Sys){$(Dev)}Force-Sts")
+{
+field (DESC, "Vacuum status FORCE : Off, Pumping, Rough Vacuum OK, Stopping")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix)_Force_Sts S 0.5" )
+field (NELM, "32")
+field (FTVL, "LONG")
+field (SCAN, "Passive")
+}
+
+record (mbbiDirect, "$(Sys){$(Dev)}Interlock-InVlvsOK")
+{
+field (DESC, "Input valves interlock interlock ok")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Interlock_InVlvsOK B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (mbbiDirect, "$(Sys){$(Dev)}Interlock-OutVlvsOK")
+{
+field (DESC, "Output valves vac interlock ok")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Interlock_OutVlvsOK B 0 S 0.5" )
+field (SCAN, "I/O Intr")
+field (NOBT, 32)
+}
+
+
+record (ao, "$(Sys){$(Dev)}Alarm-InVac:Timeout")
+{
+field (DESC, "Input vacuum source timeout error array")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Alarm_InVacTimeout B 0 S 0.5" )
+field (SCAN, "Passive")
+}
+
+
+record (bi, "$(Sys){$(Dev)}Param-MF:HighVacOption")
+{
+field (DESC, "Manifold high vacuum option")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).Param_MFHighVacOption S 0.5" )
+field (SCAN, "Passive")
+}
+
+record (ao, "$(Sys){$(Dev)}Alarm-BlockingTimeout")
+{
+field (DESC, "Blocking request timeout alarm")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Alarm_BlockingTimeout B 0 S 0.5" )
+field (SCAN, "Passive")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-RoughVac:Timeout")
+{
+field (DESC, "Rough vacuum slave timeout")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_RoughVacTimeout B 0 S 0.5")
+field (SCAN, "Passive")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-HighVac:Timeout")
+{
+field (DESC, "High vacuum slave timeout")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_HighVacTimeout B 0 S 0.5")
+field (SCAN, "Passive")
+}
+
+
+record (ao, "$(Sys){$(Dev)}Param-BlockingMaxTime")
+{
+field (DESC, "Blocking request timeout")
+field (DTYP, "EtherIP")
+field (OUT, "@$(PLC) $(TagPrefix).Param_BlockingTimeout B 0 S 0.5")
+field (SCAN, "Passive")
+}
+
+
+record (bi, "$(Sys){$(Dev)}Sts:ForceModeRequest")
+{
+field (DESC, "FORCE mode status")
+field (DTYP, "EtherIP")
+field (INP, "@$(PLC) $(TagPrefix).StsForceModeRequest S 0.5" )
+field (SCAN, "I/O Intr")
+}
+
+

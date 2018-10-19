@@ -1,0 +1,371 @@
+
+
+record(bi, "$(Sys){$(Dev)}Out-RP:OnOff")
+{
+field(DESC, "Roughing pump ON/OFF Command")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_RPOnOff S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-RP:OnSts")
+{
+field(DESC, "Roughing pump ON/OFF Status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_RPOnSts S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-RP:Warning")
+{
+field(DESC, "Roughing pump warning")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_RPWarning S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-RP:Alarm")
+{
+field(DESC, "Roughing pump alarm")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_RPAlarm S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(ai, "$(Sys){$(Dev)}In-WFM:F-I")
+{
+field(DESC, "Roughing pump water flow")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_WFMF_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Exchange-USVac:P-I")
+{
+field(DESC, "Upstream vacuum pressure feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Exchange_USVacP_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+record(ai, "$(Sys){$(Dev)}In-TCG:P-I")
+{
+field(DESC, "Chamber vacuum value TCG")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_TCGP_I S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Out-MainVlv:Cmd")
+{
+field(DESC, "Main valve command")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Output_MainVlvCmd S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-MainVlv:Opened")
+{
+field(DESC, "Main valve opened feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_MainVlvOpened S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}In-MainVlv:Closed")
+{
+field(DESC, "Main valve closed feedback")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Input_MainVlvClosed S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-RP:Alarm")
+{
+field(DESC, "Alarm signal from roughing pump")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_RPAlarm S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-RP:Warning")
+{
+field(DESC, "Warning signal from roughing pump")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_RPWarning S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-RP:FB")
+{
+field(DESC, "Roughing pump status feedback error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_RPFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-MainVlv:FB")
+{
+field(DESC, "Main feedback error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_MainVlvFB S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-WFM")
+{
+field(DESC, "Roughing pump water flow fault")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_WFM S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Alarm-Timeout")
+{
+field(DESC, "Rough group timeout error")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Alarm_Timeout S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bo, "$(Sys){$(Dev)}Param-Rough:WFMOption")
+{
+field(DESC, "Rough WFM option")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).ParamRoughWFMOpti S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-TCG:High")
+{
+field(DESC, "TCG High")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_TCGHigh S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-TCG:HiHi")
+{
+field(DESC, "TCG HiHi")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_TCGHiHi S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-WFM:Low")
+{
+field(DESC, "WFM Low")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_WFMLow S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-WFM:LoLo")
+{
+field(DESC, "WFM LoLo")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_WFMLoLo S 0.5")
+field(PREC, "2")
+field(ASLO, "1")
+field(AOFF, "1")
+}
+
+
+record(ao, "$(Sys){$(Dev)}Param-Rough:Timeout")
+{
+field(DESC, "Rough vacuum timeout")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Param_RoughTimeout S 0.5")
+}
+
+
+record(ai, "$(Sys){$(Dev)}Param-Rough:MFPort")
+{
+field(DESC, "Manifold In number: 0 if not connected to manifold")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Param_RoughMFPort S 0.5")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Cmd-Rough:On")
+{
+field(DESC, "Rough group ON/OFF")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).CmdRoughOn S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bo, "$(Sys){$(Dev)}Cmd:ForceModeRequest")
+{
+field(DESC, "Force mode request")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).CmdForceModeRequest S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Sts:ForceModeRequest")
+{
+field(DESC, "Force mode status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_ForceModeRequest S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(ai, "$(Sys){$(Dev)}Sts-Rough")
+{
+field(DESC, "Vacuum status: Off, Pumping, Rough Vacuum OK, Stopping")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_Rough S 0.5")
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-RP:On")
+{
+field(DESC, "Roughing pump ON/OFF Force")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_RPOn S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bo, "$(Sys){$(Dev)}Force-MainVlv:Open")
+{
+field(DESC, "Main AV OPEN/CLOSE Force")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_MainVlvOpen S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(ao, "$(Sys){$(Dev)}Force-Sts")
+{
+field(DESC, "Vacuum status Force : Off, Pumping, Rough Vacuum OK, Stopping")
+field(DTYP, "EtherIP")
+field(SCAN, "Passive")
+field(OUT, "@$(PLC) $(TagPrefix).Force_Sts S 0.5")
+}
+
+
+record(bi, "$(Sys){$(Dev)}Interlock-Rough")
+{
+field(DESC, "Rough vac interlock")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Interlock_RoughOK S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
+
+
+record(bi, "$(Sys){$(Dev)}Sts-TCG")
+{
+field(DESC, "Vacuum gauge status")
+field(DTYP, "EtherIP")
+field(SCAN, "I/O Intr")
+field(INP, "@$(PLC) $(TagPrefix).Sts_TCG S 0.5")
+field(ZNAM, "Off")
+field(ONAM, "On")
+
+}
